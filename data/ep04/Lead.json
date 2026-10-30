@@ -1,0 +1,13 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Lead", "referenceId": "SwiftLead" },
+      "FirstName": "Marcus",
+      "LastName": "Hale",
+      "Title": "Head of Fleet",
+      "Company": "Swift Couriers",
+      "LeadSource": "Web",
+      "Description": "Electric vans for urban deliveries, pilot first."
+    }
+  ]
+}

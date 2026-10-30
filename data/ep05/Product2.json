@@ -1,0 +1,9 @@
+{
+  "records": [
+    { "attributes": { "type": "Product2", "referenceId": "Aria" }, "Name": "Aria", "ProductCode": "AR-200", "IsActive": true, "Description": "Electric car for private buyers." },
+    { "attributes": { "type": "Product2", "referenceId": "DepotCharger" }, "Name": "Depot Charger 150 kW", "ProductCode": "DC-150", "IsActive": true, "Description": "Shared fast charger for a business vehicle depot." },
+    { "attributes": { "type": "Product2", "referenceId": "Installation" }, "Name": "Charger Installation", "ProductCode": "SV-INST", "IsActive": true, "Description": "One-time installation of a depot charger." },
+    { "attributes": { "type": "Product2", "referenceId": "WallCharger" }, "Name": "Wall Charger 11 kW", "ProductCode": "WC-11", "IsActive": true, "Description": "Home charger for one vehicle." },
+    { "attributes": { "type": "Product2", "referenceId": "Connect" }, "Name": "Velora Connect", "ProductCode": "VC-SUB", "IsActive": true, "Description": "Telematics for one vehicle, billed per month." }
+  ]
+}

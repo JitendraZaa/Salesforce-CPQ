@@ -1,5 +1,8 @@
 {
-  "billingScheduleIds": ["44bg7000001eWTgAAM"],
+  "billingScheduleIds": [
+    "44bg7000001eg82AAA",
+    "44bg7000001eg8FAAQ"
+  ],
   "action": "Posted",
   "invoiceDate": "2027-02-01",
   "targetDate": "2027-02-01"

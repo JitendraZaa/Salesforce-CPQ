@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="180" viewBox="0 0 720 180">
+  <rect width="720" height="180" fill="#ffffff"/>
+  <g transform="translate(30,30)">
+    <circle cx="60" cy="60" r="60" fill="#0B5CAB"/>
+    <path d="M28 34 L60 92 L92 34" fill="none" stroke="#ffffff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M66 22 L52 60 L70 60 L56 98" fill="none" stroke="#7DD3FC" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="180" y="98" font-family="Inter, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="#0B1B2B">Velora</text>
+  <text x="182" y="140" font-family="Inter, Helvetica, Arial, sans-serif" font-size="30" font-weight="500" letter-spacing="10" fill="#0B5CAB">MOTORS</text>
+</svg>

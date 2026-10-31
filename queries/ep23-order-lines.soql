@@ -1,0 +1,4 @@
+SELECT Product2.Name, Quantity, UnitPrice, TotalPrice, ServiceDate, EndDate, BillingTreatment.Name
+FROM OrderItem
+WHERE Order.OrderNumber = '00000121'
+ORDER BY ServiceDate

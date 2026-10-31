@@ -52,3 +52,8 @@ A red first run on the pipeline then tells you something about the pipeline, not
 
 Workflows triggered from a fork do not receive repository secrets, so a pull request from a fork cannot run the
 sign-in step.
+
+## Turn the workflow on
+
+The workflow skips every run until the repository variable `CI_ENABLED` is `true`. After adding the four secrets,
+set it under Settings, Secrets and variables, Actions, Variables, or with `gh variable set CI_ENABLED --body true`.

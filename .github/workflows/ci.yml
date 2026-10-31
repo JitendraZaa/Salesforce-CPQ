@@ -5,9 +5,12 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   test:
+    # Runs once the repository variable CI_ENABLED is set to true, after the four secrets are in place.
+    if: vars.CI_ENABLED == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

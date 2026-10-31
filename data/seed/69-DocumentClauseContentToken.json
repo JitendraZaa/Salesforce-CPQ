@@ -1,0 +1,20 @@
+{
+ "match": [
+  "Name",
+  "DocumentClauseId"
+ ],
+ "object": "DocumentClauseContentToken",
+ "records": [
+  {
+   "@DocumentClauseId": {
+    "key": "Battery Warranty for Fleet Vans",
+    "object": "DocumentClause"
+   },
+   "DefaultValue": "8",
+   "Name": "Years",
+   "TokenType": "Placeholder",
+   "ValueType": "String",
+   "_key": "Years"
+  }
+ ]
+}

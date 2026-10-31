@@ -1,0 +1,32 @@
+{
+ "match": [
+  "ProductUsageResourceId",
+  "UsageOveragePolicyId",
+  "RatingFrequencyPolicyId",
+  "UsageAggregationPolicyId",
+  "UsageCommitmentPolicyId",
+  "ProductSellingModelId"
+ ],
+ "object": "ProductUsageResourcePolicy",
+ "records": [
+  {
+   "@ProductUsageResourceId": {
+    "key": "|Depot Charging|Charging Energy",
+    "object": "ProductUsageResource"
+   },
+   "@RatingFrequencyPolicyId": {
+    "key": "RFP-00000001",
+    "object": "RatingFrequencyPolicy"
+   },
+   "@UsageAggregationPolicyId": {
+    "key": "Depot Energy Monthly Sum",
+    "object": "UsageResourceBillingPolicy"
+   },
+   "@UsageOveragePolicyId": {
+    "key": "Overage Chargeable - Yes",
+    "object": "UsageOveragePolicy"
+   },
+   "_key": "|1Trg7000000DudtCAC|Overage Chargeable - Yes|RFP-00000001|Depot Energy Monthly Sum"
+  }
+ ]
+}

@@ -1,0 +1,13 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "FulfillmentStepDefinitionGroup",
+ "records": [
+  {
+   "Name": "Fleet delivery",
+   "UsageType": "Fulfillment",
+   "_key": "Fleet delivery"
+  }
+ ]
+}

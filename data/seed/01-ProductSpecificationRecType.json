@@ -1,0 +1,40 @@
+{
+ "match": [
+  "DeveloperName"
+ ],
+ "object": "ProductSpecificationRecType",
+ "records": [
+  {
+   "@ProductSpecificationType": {
+    "DeveloperName": "Commercial",
+    "object": "ProductSpecificationType"
+   },
+   "@RecordTypeId": {
+    "DeveloperName": "Commercial",
+    "SobjectType": "Product2",
+    "object": "RecordType"
+   },
+   "DeveloperName": "Commercial",
+   "IsCommercial": true,
+   "Language": "en_US",
+   "MasterLabel": "Commercial",
+   "_key": "Commercial"
+  },
+  {
+   "@ProductSpecificationType": {
+    "DeveloperName": "Technical",
+    "object": "ProductSpecificationType"
+   },
+   "@RecordTypeId": {
+    "DeveloperName": "Technical",
+    "SobjectType": "Product2",
+    "object": "RecordType"
+   },
+   "DeveloperName": "Technical",
+   "IsCommercial": false,
+   "Language": "en_US",
+   "MasterLabel": "Technical",
+   "_key": "Technical"
+  }
+ ]
+}

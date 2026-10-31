@@ -1,0 +1,47 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "ProductComponentGroup",
+ "records": [
+  {
+   "@ParentProductId": {
+    "key": "Volt Van Fleet Package",
+    "object": "Product2"
+   },
+   "Code": "GRP-ACCESSORIES",
+   "Description": "Optional add-ons.",
+   "MaxBundleComponents": 1,
+   "MinBundleComponents": 0,
+   "Name": "Accessories",
+   "Sequence": 3,
+   "_key": "Accessories"
+  },
+  {
+   "@ParentProductId": {
+    "key": "Volt Van Fleet Package",
+    "object": "Product2"
+   },
+   "Code": "GRP-SERVICES",
+   "Description": "Connected services for the van.",
+   "MaxBundleComponents": 1,
+   "MinBundleComponents": 1,
+   "Name": "Services",
+   "Sequence": 2,
+   "_key": "Services"
+  },
+  {
+   "@ParentProductId": {
+    "key": "Volt Van Fleet Package",
+    "object": "Product2"
+   },
+   "Code": "GRP-VEHICLE",
+   "Description": "The van in the package.",
+   "MaxBundleComponents": 1,
+   "MinBundleComponents": 1,
+   "Name": "Vehicle",
+   "Sequence": 1,
+   "_key": "Vehicle"
+  }
+ ]
+}

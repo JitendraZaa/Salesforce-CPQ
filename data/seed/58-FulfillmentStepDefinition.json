@@ -1,0 +1,33 @@
+{
+ "match": [
+  "Name",
+  "StepDefinitionGroupId"
+ ],
+ "object": "FulfillmentStepDefinition",
+ "records": [
+  {
+   "@StepDefinitionGroupId": {
+    "key": "Fleet delivery",
+    "object": "FulfillmentStepDefinitionGroup"
+   },
+   "IsSkipBranch": false,
+   "Name": "Build Vans",
+   "Scope": "LineItem",
+   "StepType": "ManualTask",
+   "UsageType": "Fulfillment",
+   "_key": "Build Vans"
+  },
+  {
+   "@StepDefinitionGroupId": {
+    "key": "Fleet delivery",
+    "object": "FulfillmentStepDefinitionGroup"
+   },
+   "IsSkipBranch": false,
+   "Name": "Deliver Vans",
+   "Scope": "LineItem",
+   "StepType": "ManualTask",
+   "UsageType": "Fulfillment",
+   "_key": "Deliver Vans"
+  }
+ ]
+}

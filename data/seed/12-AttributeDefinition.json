@@ -1,0 +1,44 @@
+{
+ "match": [
+  "Name",
+  "UnitOfMeasureId",
+  "PicklistId"
+ ],
+ "object": "AttributeDefinition",
+ "records": [
+  {
+   "@PicklistId": {
+    "key": "Battery",
+    "object": "AttributePicklist"
+   },
+   "Code": "BATTERY",
+   "DataType": "Picklist",
+   "DefaultValue": "Standard 60 kWh",
+   "Description": "Battery size of the vehicle.",
+   "DeveloperName": "Battery",
+   "IsActive": true,
+   "IsRequired": true,
+   "Label": "Battery",
+   "Name": "Battery",
+   "SourceSystemIdentifier": "ATTR-BATTERY",
+   "_key": "Battery"
+  },
+  {
+   "@PicklistId": {
+    "key": "Body",
+    "object": "AttributePicklist"
+   },
+   "Code": "BODY",
+   "DataType": "Picklist",
+   "DefaultValue": "Panel",
+   "Description": "Body style of the van.",
+   "DeveloperName": "Body",
+   "IsActive": true,
+   "IsRequired": true,
+   "Label": "Body",
+   "Name": "Body",
+   "SourceSystemIdentifier": "ATTR-BODY",
+   "_key": "Body"
+  }
+ ]
+}

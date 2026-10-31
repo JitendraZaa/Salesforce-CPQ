@@ -1,0 +1,67 @@
+{
+ "match": [
+  "RateCardId",
+  "RateUnitOfMeasureId",
+  "UsageResourceId",
+  "ProductId",
+  "ProductSellingModelId"
+ ],
+ "object": "RateCardEntry",
+ "records": [
+  {
+   "@ProductId": {
+    "key": "Depot Charging",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "Term Based - Monthly",
+    "object": "ProductSellingModel"
+   },
+   "@RateCardId": {
+    "key": "Velora Charging Rate Card",
+    "object": "RateCard"
+   },
+   "@RateUnitOfMeasureId": {
+    "key": "USD",
+    "object": "UnitOfMeasure"
+   },
+   "@UsageResourceId": {
+    "key": "Charging Energy",
+    "object": "UsageResource"
+   },
+   "EffectiveFrom": "2026-10-01T07:00:00.000+0000",
+   "Rate": 0.21,
+   "RateNegotiation": "NonNegotiable",
+   "Status": "Active",
+   "_key": "|Velora Charging Rate Card|USD|Charging Energy|Depot Charging|Term Based - Monthly"
+  },
+  {
+   "@ProductId": {
+    "key": "Depot Charging",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "Term Based - Monthly",
+    "object": "ProductSellingModel"
+   },
+   "@RateCardId": {
+    "key": "Velora Charging Rate Card",
+    "object": "RateCard"
+   },
+   "@RateUnitOfMeasureId": {
+    "key": "USD",
+    "object": "UnitOfMeasure"
+   },
+   "@UsageResourceId": {
+    "key": "Charging Energy",
+    "object": "UsageResource"
+   },
+   "EffectiveFrom": "2026-09-01T07:00:00.000+0000",
+   "EffectiveTo": "2026-10-01T06:59:00.000+0000",
+   "Rate": 0.21,
+   "RateNegotiation": "NonNegotiable",
+   "Status": "Active",
+   "_key": "|Velora Charging Rate Card|USD|Charging Energy|Depot Charging|Term Based - Monthly"
+  }
+ ]
+}

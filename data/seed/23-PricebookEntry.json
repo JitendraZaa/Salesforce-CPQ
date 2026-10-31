@@ -1,0 +1,181 @@
+{
+ "match": [
+  "Pricebook2Id",
+  "Product2Id",
+  "ProductSellingModelId"
+ ],
+ "object": "PricebookEntry",
+ "records": [
+  {
+   "@Pricebook2Id": {
+    "key": "Standard Price Book",
+    "object": "Pricebook2"
+   },
+   "@Product2Id": {
+    "key": "Aria",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsActive": true,
+   "IsDerived": false,
+   "UnitPrice": 39000.0,
+   "UseStandardPrice": false,
+   "_key": "|Standard Price Book|Aria|One Time"
+  },
+  {
+   "@Pricebook2Id": {
+    "key": "Standard Price Book",
+    "object": "Pricebook2"
+   },
+   "@Product2Id": {
+    "key": "Charger Installation",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsActive": true,
+   "IsDerived": false,
+   "UnitPrice": 6800.0,
+   "UseStandardPrice": false,
+   "_key": "|Standard Price Book|Charger Installation|One Time"
+  },
+  {
+   "@Pricebook2Id": {
+    "key": "Standard Price Book",
+    "object": "Pricebook2"
+   },
+   "@Product2Id": {
+    "key": "Depot Charger 150 kW",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsActive": true,
+   "IsDerived": false,
+   "UnitPrice": 32000.0,
+   "UseStandardPrice": false,
+   "_key": "|Standard Price Book|Depot Charger 150 kW|One Time"
+  },
+  {
+   "@Pricebook2Id": {
+    "key": "Standard Price Book",
+    "object": "Pricebook2"
+   },
+   "@Product2Id": {
+    "key": "Depot Charging",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "Term Based - Monthly",
+    "object": "ProductSellingModel"
+   },
+   "IsActive": true,
+   "IsDerived": false,
+   "UnitPrice": 0.0,
+   "UseStandardPrice": false,
+   "_key": "|Standard Price Book|Depot Charging|Term Based - Monthly"
+  },
+  {
+   "@Pricebook2Id": {
+    "key": "Standard Price Book",
+    "object": "Pricebook2"
+   },
+   "@Product2Id": {
+    "key": "Velora Connect",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "Evergreen - Monthly",
+    "object": "ProductSellingModel"
+   },
+   "IsActive": true,
+   "IsDerived": false,
+   "UnitPrice": 29.0,
+   "UseStandardPrice": false,
+   "_key": "|Standard Price Book|Velora Connect|Evergreen - Monthly"
+  },
+  {
+   "@Pricebook2Id": {
+    "key": "Standard Price Book",
+    "object": "Pricebook2"
+   },
+   "@Product2Id": {
+    "key": "Velora Connect",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "Term Based - Monthly",
+    "object": "ProductSellingModel"
+   },
+   "IsActive": true,
+   "IsDerived": false,
+   "UnitPrice": 29.0,
+   "UseStandardPrice": false,
+   "_key": "|Standard Price Book|Velora Connect|Term Based - Monthly"
+  },
+  {
+   "@Pricebook2Id": {
+    "key": "Standard Price Book",
+    "object": "Pricebook2"
+   },
+   "@Product2Id": {
+    "key": "Volt Van Fleet Package",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsActive": true,
+   "IsDerived": false,
+   "UnitPrice": 0.0,
+   "UseStandardPrice": false,
+   "_key": "|Standard Price Book|Volt Van Fleet Package|One Time"
+  },
+  {
+   "@Pricebook2Id": {
+    "key": "Standard Price Book",
+    "object": "Pricebook2"
+   },
+   "@Product2Id": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsActive": true,
+   "IsDerived": false,
+   "UnitPrice": 48000.0,
+   "UseStandardPrice": false,
+   "_key": "|Standard Price Book|Volt Van|One Time"
+  },
+  {
+   "@Pricebook2Id": {
+    "key": "Standard Price Book",
+    "object": "Pricebook2"
+   },
+   "@Product2Id": {
+    "key": "Wall Charger 11 kW",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsActive": true,
+   "IsDerived": false,
+   "UnitPrice": 1100.0,
+   "UseStandardPrice": false,
+   "_key": "|Standard Price Book|Wall Charger 11 kW|One Time"
+  }
+ ]
+}

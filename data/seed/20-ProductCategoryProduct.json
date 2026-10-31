@@ -1,0 +1,119 @@
+{
+ "match": [
+  "ProductCategoryId",
+  "ProductId"
+ ],
+ "object": "ProductCategoryProduct",
+ "records": [
+  {
+   "@ProductCategoryId": {
+    "key": "Cars",
+    "object": "ProductCategory"
+   },
+   "@ProductId": {
+    "key": "Aria",
+    "object": "Product2"
+   },
+   "_key": "|Cars|Aria"
+  },
+  {
+   "@ProductCategoryId": {
+    "key": "Cars",
+    "object": "ProductCategory"
+   },
+   "@ProductId": {
+    "key": "Wall Charger 11 kW",
+    "object": "Product2"
+   },
+   "_key": "|Cars|Wall Charger 11 kW"
+  },
+  {
+   "@ProductCategoryId": {
+    "key": "Depot",
+    "object": "ProductCategory"
+   },
+   "@ProductId": {
+    "key": "Depot Charger 150 kW",
+    "object": "Product2"
+   },
+   "_key": "|Depot|Depot Charger 150 kW"
+  },
+  {
+   "@ProductCategoryId": {
+    "key": "Depot",
+    "object": "ProductCategory"
+   },
+   "@ProductId": {
+    "key": "Depot Charging",
+    "object": "Product2"
+   },
+   "_key": "|Depot|Depot Charging"
+  },
+  {
+   "@ProductCategoryId": {
+    "key": "Home",
+    "object": "ProductCategory"
+   },
+   "@ProductId": {
+    "key": "Wall Charger 11 kW",
+    "object": "Product2"
+   },
+   "_key": "|Home|Wall Charger 11 kW"
+  },
+  {
+   "@ProductCategoryId": {
+    "key": "Services",
+    "object": "ProductCategory"
+   },
+   "@ProductId": {
+    "key": "Charger Installation",
+    "object": "Product2"
+   },
+   "_key": "|Services|Charger Installation"
+  },
+  {
+   "@ProductCategoryId": {
+    "key": "Services",
+    "object": "ProductCategory"
+   },
+   "@ProductId": {
+    "key": "Velora Connect",
+    "object": "Product2"
+   },
+   "_key": "|Services|Velora Connect"
+  },
+  {
+   "@ProductCategoryId": {
+    "key": "Vans",
+    "object": "ProductCategory"
+   },
+   "@ProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "_key": "|Vans|Volt Van"
+  },
+  {
+   "@ProductCategoryId": {
+    "key": "Vans",
+    "object": "ProductCategory"
+   },
+   "@ProductId": {
+    "key": "Volt Van Fleet Package",
+    "object": "Product2"
+   },
+   "_key": "|Vans|Volt Van Fleet Package"
+  },
+  {
+   "@ProductCategoryId": {
+    "key": "Vehicles",
+    "object": "ProductCategory"
+   },
+   "@ProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "_key": "|Vehicles|Volt Van"
+  }
+ ]
+}

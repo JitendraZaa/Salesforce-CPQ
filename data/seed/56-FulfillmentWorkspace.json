@@ -1,0 +1,13 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "FulfillmentWorkspace",
+ "records": [
+  {
+   "Description": "How Velora builds and delivers fleet vans",
+   "Name": "Swift Fleet Fulfillment",
+   "_key": "Swift Fleet Fulfillment"
+  }
+ ]
+}

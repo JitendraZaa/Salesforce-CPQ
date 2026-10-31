@@ -1,0 +1,54 @@
+{
+ "match": [
+  "Name",
+  "ProductClassificationId",
+  "AttributeDefinitionId",
+  "AttributeCategoryId",
+  "OverriddenInheritedAttributeId"
+ ],
+ "object": "ProductClassificationAttr",
+ "records": [
+  {
+   "@AttributeDefinitionId": {
+    "key": "Battery",
+    "object": "AttributeDefinition"
+   },
+   "@ProductClassificationId": {
+    "key": "Electric Vehicle",
+    "object": "ProductClassification"
+   },
+   "AttributeNameOverride": "Battery",
+   "DefaultValue": "Standard 60 kWh",
+   "Description": "Battery size of the vehicle.",
+   "IsHidden": false,
+   "IsPriceImpacting": false,
+   "IsReadOnly": false,
+   "IsRequired": true,
+   "Name": "Battery",
+   "Sequence": 2,
+   "Status": "Active",
+   "_key": "Battery"
+  },
+  {
+   "@AttributeDefinitionId": {
+    "key": "Body",
+    "object": "AttributeDefinition"
+   },
+   "@ProductClassificationId": {
+    "key": "Electric Vehicle",
+    "object": "ProductClassification"
+   },
+   "AttributeNameOverride": "Body",
+   "DefaultValue": "Panel",
+   "Description": "Body style of the van.",
+   "IsHidden": false,
+   "IsPriceImpacting": false,
+   "IsReadOnly": false,
+   "IsRequired": true,
+   "Name": "Body",
+   "Sequence": 1,
+   "Status": "Active",
+   "_key": "Body"
+  }
+ ]
+}

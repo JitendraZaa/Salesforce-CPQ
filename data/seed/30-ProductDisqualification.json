@@ -1,0 +1,31 @@
+{
+ "match": [
+  "ProductId",
+  "RootProductId"
+ ],
+ "object": "ProductDisqualification",
+ "records": [
+  {
+   "@ProductId": {
+    "key": "Charger Installation",
+    "object": "Product2"
+   },
+   "EffectiveFromDate": "2026-10-31",
+   "EffectiveToDate": "2027-02-08",
+   "Has_Depot__c": false,
+   "Reason": "Installation comes with a depot charger, so only depot accounts can buy it.",
+   "_key": "|Charger Installation"
+  },
+  {
+   "@ProductId": {
+    "key": "Depot Charger 150 kW",
+    "object": "Product2"
+   },
+   "EffectiveFromDate": "2026-10-31",
+   "EffectiveToDate": "2027-02-08",
+   "Has_Depot__c": false,
+   "Reason": "Depot chargers are sold only to accounts that run their own vehicle depot.",
+   "_key": "|Depot Charger 150 kW"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "match": [
+  "Name",
+  "FulfillmentStepDefinitionId",
+  "DependsOnStepDefinitionId"
+ ],
+ "object": "FulfillmentStepDependencyDef",
+ "records": [
+  {
+   "@DependsOnStepDefinitionId": {
+    "key": "Build Vans",
+    "object": "FulfillmentStepDefinition"
+   },
+   "@FulfillmentStepDefinitionId": {
+    "key": "Deliver Vans",
+    "object": "FulfillmentStepDefinition"
+   },
+   "DependencyScope": "LineItem",
+   "Name": "Build before delivery",
+   "_key": "Build before delivery"
+  }
+ ]
+}

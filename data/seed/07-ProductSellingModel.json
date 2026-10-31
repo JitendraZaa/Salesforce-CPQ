@@ -1,0 +1,33 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "ProductSellingModel",
+ "records": [
+  {
+   "DoesAutoRenewAssetByDefault": false,
+   "Name": "Evergreen - Monthly",
+   "PricingTerm": 1,
+   "PricingTermUnit": "Months",
+   "SellingModelType": "Evergreen",
+   "Status": "Active",
+   "_key": "Evergreen - Monthly"
+  },
+  {
+   "DoesAutoRenewAssetByDefault": false,
+   "Name": "One Time",
+   "SellingModelType": "OneTime",
+   "Status": "Active",
+   "_key": "One Time"
+  },
+  {
+   "DoesAutoRenewAssetByDefault": false,
+   "Name": "Term Based - Monthly",
+   "PricingTerm": 1,
+   "PricingTermUnit": "Months",
+   "SellingModelType": "TermDefined",
+   "Status": "Active",
+   "_key": "Term Based - Monthly"
+  }
+ ]
+}

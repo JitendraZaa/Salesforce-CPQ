@@ -1,0 +1,15 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "RateCard",
+ "records": [
+  {
+   "Description": "Prices for depot charging energy",
+   "EffectiveFrom": "2026-09-01T07:00:00.000+0000",
+   "Name": "Velora Charging Rate Card",
+   "Type": "Base",
+   "_key": "Velora Charging Rate Card"
+  }
+ ]
+}

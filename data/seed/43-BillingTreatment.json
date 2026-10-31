@@ -1,0 +1,59 @@
+{
+ "match": [
+  "Name",
+  "BillingPolicyId",
+  "LegalEntityId"
+ ],
+ "object": "BillingTreatment",
+ "records": [
+  {
+   "@BillingPolicyId": {
+    "key": "Billing Policy - Advance",
+    "object": "BillingPolicy"
+   },
+   "@LegalEntityId": {
+    "key": "Default Legal Entity - US",
+    "object": "LegalEntity"
+   },
+   "CanChangeBillingFrequency": false,
+   "ExcludeFromBilling": "No",
+   "IsMilestoneBilling": false,
+   "Name": "Billing Treatment - Advance",
+   "Status": "Active",
+   "_key": "Billing Treatment - Advance"
+  },
+  {
+   "@BillingPolicyId": {
+    "key": "Billing Policy - Arrears",
+    "object": "BillingPolicy"
+   },
+   "@LegalEntityId": {
+    "key": "Default Legal Entity - US",
+    "object": "LegalEntity"
+   },
+   "CanChangeBillingFrequency": false,
+   "ExcludeFromBilling": "No",
+   "IsMilestoneBilling": false,
+   "Name": "Billing Treatment - Arrears",
+   "Status": "Active",
+   "_key": "Billing Treatment - Arrears"
+  },
+  {
+   "@BillingPolicyId": {
+    "key": "Velora Advance",
+    "object": "BillingPolicy"
+   },
+   "@LegalEntityId": {
+    "key": "Velora Motors Inc.",
+    "object": "LegalEntity"
+   },
+   "CanChangeBillingFrequency": false,
+   "Description": "Invoice each billing period at its start",
+   "ExcludeFromBilling": "No",
+   "IsMilestoneBilling": false,
+   "Name": "Velora Advance Treatment",
+   "Status": "Active",
+   "_key": "Velora Advance Treatment"
+  }
+ ]
+}

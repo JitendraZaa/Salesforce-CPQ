@@ -1,0 +1,101 @@
+{
+ "match": [
+  "PriceAdjustmentScheduleId",
+  "ProductSellingModelId",
+  "AttributeBasedAdjRuleId",
+  "ProductId"
+ ],
+ "object": "AttributeBasedAdjustment",
+ "records": [
+  {
+   "@AttributeBasedAdjRuleId": {
+    "key": "Rule_1793467984016",
+    "object": "AttributeBasedAdjRule"
+   },
+   "@PriceAdjustmentScheduleId": {
+    "key": "Standard Attribute Based Adjustment",
+    "object": "PriceAdjustmentSchedule"
+   },
+   "@ProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "AdjustmentType": "Amount",
+   "AdjustmentValue": 6500.0,
+   "EffectiveFrom": "2026-10-01T07:00:00.000+0000",
+   "EffectiveTo": "2026-10-31T06:59:59.000+0000",
+   "_key": "|Standard Attribute Based Adjustment|One Time|Rule_1793467984016|Volt Van"
+  },
+  {
+   "@AttributeBasedAdjRuleId": {
+    "key": "Rule_1793467984016",
+    "object": "AttributeBasedAdjRule"
+   },
+   "@PriceAdjustmentScheduleId": {
+    "key": "Standard Attribute Based Adjustment",
+    "object": "PriceAdjustmentSchedule"
+   },
+   "@ProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "AdjustmentType": "Override",
+   "AdjustmentValue": 54500.0,
+   "EffectiveFrom": "2026-10-31T07:00:00.000+0000",
+   "_key": "|Standard Attribute Based Adjustment|One Time|Rule_1793467984016|Volt Van"
+  },
+  {
+   "@AttributeBasedAdjRuleId": {
+    "key": "Rule_1793468121545",
+    "object": "AttributeBasedAdjRule"
+   },
+   "@PriceAdjustmentScheduleId": {
+    "key": "Standard Attribute Based Adjustment",
+    "object": "PriceAdjustmentSchedule"
+   },
+   "@ProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "AdjustmentType": "Amount",
+   "AdjustmentValue": 10700.0,
+   "EffectiveFrom": "2026-10-01T07:00:00.000+0000",
+   "EffectiveTo": "2026-10-31T06:59:59.000+0000",
+   "_key": "|Standard Attribute Based Adjustment|One Time|Rule_1793468121545|Volt Van"
+  },
+  {
+   "@AttributeBasedAdjRuleId": {
+    "key": "Rule_1793468121545",
+    "object": "AttributeBasedAdjRule"
+   },
+   "@PriceAdjustmentScheduleId": {
+    "key": "Standard Attribute Based Adjustment",
+    "object": "PriceAdjustmentSchedule"
+   },
+   "@ProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "AdjustmentType": "Override",
+   "AdjustmentValue": 58700.0,
+   "EffectiveFrom": "2026-10-31T07:00:00.000+0000",
+   "_key": "|Standard Attribute Based Adjustment|One Time|Rule_1793468121545|Volt Van"
+  }
+ ]
+}

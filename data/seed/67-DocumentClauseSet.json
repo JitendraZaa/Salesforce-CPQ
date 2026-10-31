@@ -1,0 +1,26 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "DocumentClauseSet",
+ "records": [
+  {
+   "#Category": {
+    "key": "Warranty_and_Data",
+    "object": "ClauseCatgConfiguration"
+   },
+   "DefaultLanguage": "en_US",
+   "Name": "Battery Warranty",
+   "_key": "Battery Warranty"
+  },
+  {
+   "#Category": {
+    "key": "Warranty_and_Data",
+    "object": "ClauseCatgConfiguration"
+   },
+   "DefaultLanguage": "en_US",
+   "Name": "Data Ownership",
+   "_key": "Data Ownership"
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "match": [
+  "Name",
+  "SourceProductId",
+  "DestinationProductId",
+  "SourceProductClassificationId"
+ ],
+ "object": "ProductFulfillmentDecompRule",
+ "records": [
+  {
+   "@DestinationProductId": {
+    "key": "Volt Van Build",
+    "object": "Product2"
+   },
+   "@SourceProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "DestinationIdentifier": "01tg700001NfL9BAAV",
+   "Name": "Volt Van to Build",
+   "Priority": 1,
+   "SourceIdentifier": "01tg700001NWPqLAAX",
+   "_key": "Volt Van to Build"
+  }
+ ]
+}

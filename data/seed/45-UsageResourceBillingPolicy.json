@@ -1,0 +1,16 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "UsageResourceBillingPolicy",
+ "records": [
+  {
+   "Code": "DEPOT_KWH_MONTH",
+   "Name": "Depot Energy Monthly Sum",
+   "Status": "Active",
+   "UsageAccumulationMethod": "Sum",
+   "UsageAccumulationPeriod": "Monthly",
+   "_key": "Depot Energy Monthly Sum"
+  }
+ ]
+}

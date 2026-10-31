@@ -1,0 +1,188 @@
+{
+ "match": [
+  "ProductCode"
+ ],
+ "object": "Product2",
+ "records": [
+  {
+   "@BillingPolicyId": {
+    "key": "Velora Advance",
+    "object": "BillingPolicy"
+   },
+   "@RecordTypeId": {
+    "DeveloperName": "Commercial",
+    "SobjectType": "Product2",
+    "object": "RecordType"
+   },
+   "Description": "Velora's electric car for private buyers. Five seats, two trims, three colours, up to 480 km of range.",
+   "Family": "Vehicles",
+   "IsActive": true,
+   "IsAssetizable": true,
+   "IsSerialized": false,
+   "IsSoldOnlyWithOtherProds": false,
+   "Name": "Aria",
+   "ProductCode": "AR-200",
+   "_key": "Aria"
+  },
+  {
+   "@BillingPolicyId": {
+    "key": "Velora Advance",
+    "object": "BillingPolicy"
+   },
+   "@RecordTypeId": {
+    "DeveloperName": "Commercial",
+    "SobjectType": "Product2",
+    "object": "RecordType"
+   },
+   "Description": "Site survey, cabling, mounting and commissioning of one depot charger by Velora's certified electricians.",
+   "Family": "Services",
+   "IsActive": true,
+   "IsAssetizable": true,
+   "IsSerialized": false,
+   "IsSoldOnlyWithOtherProds": false,
+   "Name": "Charger Installation",
+   "ProductCode": "SV-INST",
+   "_key": "Charger Installation"
+  },
+  {
+   "@BillingPolicyId": {
+    "key": "Velora Advance",
+    "object": "BillingPolicy"
+   },
+   "@RecordTypeId": {
+    "DeveloperName": "Commercial",
+    "SobjectType": "Product2",
+    "object": "RecordType"
+   },
+   "Description": "150 kW DC fast charger for a business depot. Charges two vans at once and reports energy use per bay.",
+   "Family": "Charging",
+   "IsActive": true,
+   "IsAssetizable": true,
+   "IsSerialized": false,
+   "IsSoldOnlyWithOtherProds": false,
+   "Name": "Depot Charger 150 kW",
+   "ProductCode": "DC-150",
+   "_key": "Depot Charger 150 kW"
+  },
+  {
+   "@BillingPolicyId": {
+    "key": "Billing Policy - Arrears",
+    "object": "BillingPolicy"
+   },
+   "@RecordTypeId": {
+    "DeveloperName": "Commercial",
+    "SobjectType": "Product2",
+    "object": "RecordType"
+   },
+   "ConfigureDuringSale": "Allowed",
+   "Description": "Electricity from a Velora depot charger, billed per kilowatt hour at the end of each month.",
+   "Family": "Usage",
+   "IsActive": true,
+   "IsAssetizable": true,
+   "IsSerialized": false,
+   "IsSoldOnlyWithOtherProds": false,
+   "Name": "Depot Charging",
+   "ProductCode": "US-KWH",
+   "UsageModelType": "Anchor",
+   "_key": "Depot Charging"
+  },
+  {
+   "@BillingPolicyId": {
+    "key": "Velora Advance",
+    "object": "BillingPolicy"
+   },
+   "@RecordTypeId": {
+    "DeveloperName": "Commercial",
+    "SobjectType": "Product2",
+    "object": "RecordType"
+   },
+   "Description": "Telematics for one vehicle: live location, battery health, driver behaviour and service alerts, paid monthly.",
+   "Family": "Subscriptions",
+   "IsActive": true,
+   "IsAssetizable": true,
+   "IsSerialized": false,
+   "IsSoldOnlyWithOtherProds": false,
+   "Name": "Velora Connect",
+   "ProductCode": "VC-SUB",
+   "_key": "Velora Connect"
+  },
+  {
+   "@BasedOnId": {
+    "key": "Electric Vehicle",
+    "object": "ProductClassification"
+   },
+   "@BillingPolicyId": {
+    "key": "Velora Advance",
+    "object": "BillingPolicy"
+   },
+   "@RecordTypeId": {
+    "DeveloperName": "Commercial",
+    "SobjectType": "Product2",
+    "object": "RecordType"
+   },
+   "ConfigureDuringSale": "Allowed",
+   "Description": "Electric panel van for urban deliveries. Two batteries, panel or refrigerated body, up to 350 km of range.",
+   "Family": "Vehicles",
+   "IsActive": true,
+   "IsAssetizable": true,
+   "IsSerialized": false,
+   "IsSoldOnlyWithOtherProds": false,
+   "Name": "Volt Van",
+   "ProductCode": "VV-100",
+   "_key": "Volt Van"
+  },
+  {
+   "@RecordTypeId": {
+    "DeveloperName": "Technical",
+    "SobjectType": "Product2",
+    "object": "RecordType"
+   },
+   "ConfigureDuringSale": "Allowed",
+   "IsActive": true,
+   "IsAssetizable": false,
+   "IsSerialized": false,
+   "IsSoldOnlyWithOtherProds": false,
+   "Name": "Volt Van Build",
+   "ProductCode": "TP-VV-BUILD",
+   "_key": "Volt Van Build"
+  },
+  {
+   "@RecordTypeId": {
+    "DeveloperName": "Commercial",
+    "SobjectType": "Product2",
+    "object": "RecordType"
+   },
+   "ConfigureDuringSale": "Allowed",
+   "Description": "One Volt Van with its Velora Connect plan, and a wall charger when the customer wants one.",
+   "Family": "Vehicles",
+   "IsActive": true,
+   "IsAssetizable": true,
+   "IsSerialized": false,
+   "IsSoldOnlyWithOtherProds": false,
+   "Name": "Volt Van Fleet Package",
+   "ProductCode": "VVF-PKG",
+   "Type": "Bundle",
+   "_key": "Volt Van Fleet Package"
+  },
+  {
+   "@BillingPolicyId": {
+    "key": "Velora Advance",
+    "object": "BillingPolicy"
+   },
+   "@RecordTypeId": {
+    "DeveloperName": "Commercial",
+    "SobjectType": "Product2",
+    "object": "RecordType"
+   },
+   "Description": "11 kW wall charger for a home garage or driveway. Charges an Aria overnight from an ordinary supply.",
+   "Family": "Charging",
+   "IsActive": true,
+   "IsAssetizable": true,
+   "IsSerialized": false,
+   "IsSoldOnlyWithOtherProds": false,
+   "Name": "Wall Charger 11 kW",
+   "ProductCode": "WC-11",
+   "_key": "Wall Charger 11 kW"
+  }
+ ]
+}

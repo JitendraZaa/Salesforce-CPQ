@@ -1,0 +1,108 @@
+{
+ "match": [
+  "Name",
+  "CatalogId"
+ ],
+ "object": "ProductCategory",
+ "records": [
+  {
+   "@CatalogId": {
+    "key": "Velora Catalog",
+    "object": "ProductCatalog"
+   },
+   "@ParentCategoryId": {
+    "key": "Vehicles",
+    "object": "ProductCategory"
+   },
+   "Code": "CARS",
+   "Description": "Electric cars for private buyers.",
+   "IsNavigational": true,
+   "Name": "Cars",
+   "SortOrder": 2,
+   "_key": "Cars"
+  },
+  {
+   "@CatalogId": {
+    "key": "Velora Catalog",
+    "object": "ProductCatalog"
+   },
+   "Code": "CHARGING",
+   "Description": "Depot and home chargers.",
+   "IsNavigational": true,
+   "Name": "Charging",
+   "SortOrder": 2,
+   "_key": "Charging"
+  },
+  {
+   "@CatalogId": {
+    "key": "Velora Catalog",
+    "object": "ProductCatalog"
+   },
+   "@ParentCategoryId": {
+    "key": "Charging",
+    "object": "ProductCategory"
+   },
+   "Code": "DEPOT",
+   "Description": "Fast chargers for business vehicle depots.",
+   "IsNavigational": true,
+   "Name": "Depot",
+   "SortOrder": 1,
+   "_key": "Depot"
+  },
+  {
+   "@CatalogId": {
+    "key": "Velora Catalog",
+    "object": "ProductCatalog"
+   },
+   "@ParentCategoryId": {
+    "key": "Charging",
+    "object": "ProductCategory"
+   },
+   "Code": "HOME",
+   "Description": "Wall chargers for private garages and driveways.",
+   "IsNavigational": true,
+   "Name": "Home",
+   "SortOrder": 2,
+   "_key": "Home"
+  },
+  {
+   "@CatalogId": {
+    "key": "Velora Catalog",
+    "object": "ProductCatalog"
+   },
+   "Code": "SERVICES",
+   "Description": "Installation and connected services for Velora vehicles.",
+   "IsNavigational": true,
+   "Name": "Services",
+   "SortOrder": 3,
+   "_key": "Services"
+  },
+  {
+   "@CatalogId": {
+    "key": "Velora Catalog",
+    "object": "ProductCatalog"
+   },
+   "@ParentCategoryId": {
+    "key": "Vehicles",
+    "object": "ProductCategory"
+   },
+   "Code": "VANS",
+   "Description": "Electric panel vans for deliveries.",
+   "IsNavigational": true,
+   "Name": "Vans",
+   "SortOrder": 1,
+   "_key": "Vans"
+  },
+  {
+   "@CatalogId": {
+    "key": "Velora Catalog",
+    "object": "ProductCatalog"
+   },
+   "Code": "VEHICLES",
+   "IsNavigational": true,
+   "Name": "Vehicles",
+   "SortOrder": 1,
+   "_key": "Vehicles"
+  }
+ ]
+}

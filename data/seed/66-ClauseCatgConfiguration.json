@@ -1,0 +1,14 @@
+{
+ "match": [],
+ "object": "ClauseCatgConfiguration",
+ "records": [
+  {
+   "Description": "Velora fleet contract terms",
+   "DeveloperName": "Warranty_and_Data",
+   "Language": "en_US",
+   "MasterLabel": "Warranty and Data",
+   "UsageType": "ContractClauseCategory",
+   "_key": "Warranty_and_Data"
+  }
+ ]
+}

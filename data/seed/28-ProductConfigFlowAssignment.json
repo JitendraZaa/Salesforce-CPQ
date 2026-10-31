@@ -1,0 +1,22 @@
+{
+ "match": [
+  "ProductConfigurationFlowId",
+  "ProductClassificationId",
+  "ProductId"
+ ],
+ "object": "ProductConfigFlowAssignment",
+ "records": [
+  {
+   "@ProductConfigurationFlowId": {
+    "key": "",
+    "object": "ProductConfigurationFlow"
+   },
+   "@ProductId": {
+    "key": "Volt Van Fleet Package",
+    "object": "Product2"
+   },
+   "AssignmentType": "PrimaryConfiguratorFlow",
+   "_key": "|127g70000008Lk1AAE|Volt Van Fleet Package"
+  }
+ ]
+}

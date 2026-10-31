@@ -1,0 +1,65 @@
+{
+ "match": [
+  "Name",
+  "PicklistId"
+ ],
+ "object": "AttributePicklistValue",
+ "records": [
+  {
+   "@PicklistId": {
+    "key": "Battery",
+    "object": "AttributePicklist"
+   },
+   "Code": "BAT-LR",
+   "DisplayValue": "Long Range 90 kWh",
+   "IsDefault": false,
+   "Name": "Long Range 90 kWh",
+   "Sequence": 2.0,
+   "Status": "Active",
+   "Value": "Long Range 90 kWh",
+   "_key": "Long Range 90 kWh"
+  },
+  {
+   "@PicklistId": {
+    "key": "Body",
+    "object": "AttributePicklist"
+   },
+   "Code": "BODY-PAN",
+   "DisplayValue": "Panel",
+   "IsDefault": true,
+   "Name": "Panel",
+   "Sequence": 1.0,
+   "Status": "Active",
+   "Value": "Panel",
+   "_key": "Panel"
+  },
+  {
+   "@PicklistId": {
+    "key": "Body",
+    "object": "AttributePicklist"
+   },
+   "Code": "BODY-REF",
+   "DisplayValue": "Refrigerated",
+   "IsDefault": false,
+   "Name": "Refrigerated",
+   "Sequence": 2.0,
+   "Status": "Active",
+   "Value": "Refrigerated",
+   "_key": "Refrigerated"
+  },
+  {
+   "@PicklistId": {
+    "key": "Battery",
+    "object": "AttributePicklist"
+   },
+   "Code": "BAT-STD",
+   "DisplayValue": "Standard 60 kWh",
+   "IsDefault": true,
+   "Name": "Standard 60 kWh",
+   "Sequence": 1.0,
+   "Status": "Active",
+   "Value": "Standard 60 kWh",
+   "_key": "Standard 60 kWh"
+  }
+ ]
+}

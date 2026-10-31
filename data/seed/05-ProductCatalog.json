@@ -1,0 +1,16 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "ProductCatalog",
+ "records": [
+  {
+   "CatalogType": "Sales",
+   "Code": "VELORA",
+   "Description": "Vehicles, chargers and services that Velora Motors sells.",
+   "EffectiveStartDate": "2026-10-30T19:00:00.000+0000",
+   "Name": "Velora Catalog",
+   "_key": "Velora Catalog"
+  }
+ ]
+}

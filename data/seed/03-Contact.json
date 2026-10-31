@@ -1,0 +1,32 @@
+{
+ "match": [
+  "LastName",
+  "FirstName"
+ ],
+ "object": "Contact",
+ "records": [
+  {
+   "@AccountId": {
+    "key": "Brightside Motors",
+    "object": "Account"
+   },
+   "Email": "sam.okafor@example.com",
+   "FirstName": "Sam",
+   "LastName": "Okafor",
+   "Title": "Sales Manager",
+   "_key": "|Brightside Motors"
+  },
+  {
+   "@AccountId": {
+    "key": "Swift Couriers",
+    "object": "Account"
+   },
+   "Description": "Electric vans for urban deliveries, pilot first.",
+   "FirstName": "Marcus",
+   "LastName": "Hale",
+   "LeadSource": "Web",
+   "Title": "Head of Fleet",
+   "_key": "|Swift Couriers"
+  }
+ ]
+}

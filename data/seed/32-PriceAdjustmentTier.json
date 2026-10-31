@@ -1,0 +1,49 @@
+{
+ "match": [
+  "PriceAdjustmentScheduleId",
+  "Product2Id",
+  "ProductSellingModelId"
+ ],
+ "object": "PriceAdjustmentTier",
+ "records": [
+  {
+   "@PriceAdjustmentScheduleId": {
+    "key": "Standard Volume Based Adjustment",
+    "object": "PriceAdjustmentSchedule"
+   },
+   "@Product2Id": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "EffectiveFrom": "2026-10-01T07:00:00.000+0000",
+   "LowerBound": 25.0,
+   "TierType": "AdjustmentPercentage",
+   "TierValue": 4.0,
+   "UpperBound": 99.0,
+   "_key": "|Standard Volume Based Adjustment|Volt Van|One Time"
+  },
+  {
+   "@PriceAdjustmentScheduleId": {
+    "key": "Standard Volume Based Adjustment",
+    "object": "PriceAdjustmentSchedule"
+   },
+   "@Product2Id": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "EffectiveFrom": "2026-10-01T07:00:00.000+0000",
+   "LowerBound": 100.0,
+   "TierType": "AdjustmentPercentage",
+   "TierValue": 7.0,
+   "_key": "|Standard Volume Based Adjustment|Volt Van|One Time"
+  }
+ ]
+}

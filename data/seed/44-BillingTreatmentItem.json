@@ -1,0 +1,55 @@
+{
+ "match": [
+  "Name",
+  "BillingTreatmentId"
+ ],
+ "object": "BillingTreatmentItem",
+ "records": [
+  {
+   "@BillingTreatmentId": {
+    "key": "Billing Treatment - Advance",
+    "object": "BillingTreatment"
+   },
+   "BillingType": "Advance",
+   "Controller": "BillingScheduleGroup",
+   "Handling0Amount": "CreateInvoice",
+   "Name": "Billing Treatment Item - Advance",
+   "ProcessingOrder": 1,
+   "Sequencing": "Manual",
+   "Status": "Active",
+   "Type": "Remainder",
+   "_key": "Billing Treatment Item - Advance"
+  },
+  {
+   "@BillingTreatmentId": {
+    "key": "Billing Treatment - Arrears",
+    "object": "BillingTreatment"
+   },
+   "BillingType": "Arrears",
+   "Controller": "BillingScheduleGroup",
+   "Handling0Amount": "CreateInvoice",
+   "Name": "Billing Treatment Item - Arrears",
+   "ProcessingOrder": 1,
+   "Sequencing": "Manual",
+   "Status": "Active",
+   "Type": "Remainder",
+   "_key": "Billing Treatment Item - Arrears"
+  },
+  {
+   "@BillingTreatmentId": {
+    "key": "Velora Advance Treatment",
+    "object": "BillingTreatment"
+   },
+   "BillingType": "Advance",
+   "Controller": "BillingScheduleGroup",
+   "Description": "One invoice line per period, billed at the start",
+   "Handling0Amount": "CreateInvoice",
+   "Name": "Velora Advance Item",
+   "ProcessingOrder": 1,
+   "Sequencing": "Manual",
+   "Status": "Active",
+   "Type": "Remainder",
+   "_key": "Velora Advance Item"
+  }
+ ]
+}

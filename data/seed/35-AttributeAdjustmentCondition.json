@@ -1,0 +1,78 @@
+{
+ "match": [
+  "AttributeBasedAdjRuleId",
+  "AttributeDefinitionId",
+  "ProductId"
+ ],
+ "object": "AttributeAdjustmentCondition",
+ "records": [
+  {
+   "@AttributeBasedAdjRuleId": {
+    "key": "Rule_1793467984016",
+    "object": "AttributeBasedAdjRule"
+   },
+   "@AttributeDefinitionId": {
+    "key": "Battery",
+    "object": "AttributeDefinition"
+   },
+   "@ProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "Operator": "equals",
+   "StringValue": "Long Range 90 kWh",
+   "_key": "|Rule_1793467984016|Battery|Volt Van"
+  },
+  {
+   "@AttributeBasedAdjRuleId": {
+    "key": "Rule_1793467984016",
+    "object": "AttributeBasedAdjRule"
+   },
+   "@AttributeDefinitionId": {
+    "key": "Body",
+    "object": "AttributeDefinition"
+   },
+   "@ProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "Operator": "equals",
+   "StringValue": "Panel",
+   "_key": "|Rule_1793467984016|Body|Volt Van"
+  },
+  {
+   "@AttributeBasedAdjRuleId": {
+    "key": "Rule_1793468121545",
+    "object": "AttributeBasedAdjRule"
+   },
+   "@AttributeDefinitionId": {
+    "key": "Battery",
+    "object": "AttributeDefinition"
+   },
+   "@ProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "Operator": "equals",
+   "StringValue": "Long Range 90 kWh",
+   "_key": "|Rule_1793468121545|Battery|Volt Van"
+  },
+  {
+   "@AttributeBasedAdjRuleId": {
+    "key": "Rule_1793468121545",
+    "object": "AttributeBasedAdjRule"
+   },
+   "@AttributeDefinitionId": {
+    "key": "Body",
+    "object": "AttributeDefinition"
+   },
+   "@ProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "Operator": "equals",
+   "StringValue": "Refrigerated",
+   "_key": "|Rule_1793468121545|Body|Volt Van"
+  }
+ ]
+}

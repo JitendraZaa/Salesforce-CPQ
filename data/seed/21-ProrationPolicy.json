@@ -1,0 +1,15 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "ProrationPolicy",
+ "records": [
+  {
+   "ArePartialPeriodsAllowed": true,
+   "Name": "Default Proration Policy",
+   "ProrationPolicyType": "StandardTimePeriods",
+   "RemainderStrategy": "AddToLast",
+   "_key": "Default Proration Policy"
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "match": [
+  "Name",
+  "Pricebook2Id"
+ ],
+ "object": "PriceAdjustmentSchedule",
+ "records": [
+  {
+   "@Pricebook2Id": {
+    "key": "Standard Price Book",
+    "object": "Pricebook2"
+   },
+   "AdjustmentMethod": "Range",
+   "EffectiveFrom": "2024-07-08T06:11:00.000+0000",
+   "IsActive": false,
+   "Name": "Standard Attribute Based Adjustment",
+   "ScheduleType": "Attribute",
+   "_key": "Standard Attribute Based Adjustment"
+  },
+  {
+   "AdjustmentMethod": "Range",
+   "EffectiveFrom": "2023-11-27T04:02:00.000+0000",
+   "IsActive": false,
+   "Name": "Standard Volume Based Adjustment",
+   "ScheduleType": "Volume",
+   "_key": "Standard Volume Based Adjustment"
+  }
+ ]
+}

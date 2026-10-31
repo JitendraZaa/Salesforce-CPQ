@@ -1,0 +1,20 @@
+{
+ "match": [
+  "PriceBookId",
+  "RateCardId"
+ ],
+ "object": "PriceBookRateCard",
+ "records": [
+  {
+   "@PriceBookId": {
+    "key": "Standard Price Book",
+    "object": "Pricebook2"
+   },
+   "@RateCardId": {
+    "key": "Velora Charging Rate Card",
+    "object": "RateCard"
+   },
+   "_key": "|Standard Price Book|Velora Charging Rate Card"
+  }
+ ]
+}

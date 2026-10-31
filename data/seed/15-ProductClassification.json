@@ -1,0 +1,14 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "ProductClassification",
+ "records": [
+  {
+   "Code": "EV",
+   "Name": "Electric Vehicle",
+   "Status": "Active",
+   "_key": "Electric Vehicle"
+  }
+ ]
+}

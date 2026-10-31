@@ -1,0 +1,35 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "UnitOfMeasureClass",
+ "records": [
+  {
+   "@@BaseUnitOfMeasureId": {
+    "key": "USD",
+    "object": "UnitOfMeasure"
+   },
+   "@@DefaultUnitOfMeasureId": {
+    "key": "USD",
+    "object": "UnitOfMeasure"
+   },
+   "Code": "CURR004",
+   "Name": "Currency",
+   "Status": "Active",
+   "Type": "Currency",
+   "_key": "Currency"
+  },
+  {
+   "@@DefaultUnitOfMeasureId": {
+    "key": "kWh",
+    "object": "UnitOfMeasure"
+   },
+   "Code": "ENERGY",
+   "Description": "Electricity delivered by Velora depot chargers",
+   "Name": "Energy",
+   "Status": "Active",
+   "Type": "Usage",
+   "_key": "Energy"
+  }
+ ]
+}

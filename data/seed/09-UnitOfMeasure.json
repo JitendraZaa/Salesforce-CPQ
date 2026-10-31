@@ -1,0 +1,37 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "UnitOfMeasure",
+ "records": [
+  {
+   "@UnitOfMeasureClassId": {
+    "key": "Currency",
+    "object": "UnitOfMeasureClass"
+   },
+   "ConversionFactor": 1.0,
+   "Name": "USD",
+   "Sequence": 1,
+   "Status": "Active",
+   "Type": "Cost",
+   "UnitCode": "USD",
+   "_key": "USD"
+  },
+  {
+   "@UnitOfMeasureClassId": {
+    "key": "Energy",
+    "object": "UnitOfMeasureClass"
+   },
+   "ConversionFactor": 1.0,
+   "Description": "Kilowatt hour",
+   "Name": "kWh",
+   "RoundingMethod": "Nearest",
+   "Scale": 2,
+   "Sequence": 1,
+   "Status": "Active",
+   "Type": "Energy",
+   "UnitCode": "KWH",
+   "_key": "kWh"
+  }
+ ]
+}

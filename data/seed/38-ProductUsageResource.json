@@ -1,0 +1,24 @@
+{
+ "match": [
+  "ProductId",
+  "UsageResourceId",
+  "TokenResourceId"
+ ],
+ "object": "ProductUsageResource",
+ "records": [
+  {
+   "@ProductId": {
+    "key": "Depot Charging",
+    "object": "Product2"
+   },
+   "@UsageResourceId": {
+    "key": "Charging Energy",
+    "object": "UsageResource"
+   },
+   "EffectiveStartDate": "2026-10-31T07:00:00.000+0000",
+   "IsOptional": false,
+   "Status": "Active",
+   "_key": "|Depot Charging|Charging Energy"
+  }
+ ]
+}

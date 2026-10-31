@@ -1,0 +1,25 @@
+{
+ "match": [
+  "Name",
+  "UnitOfMeasureId"
+ ],
+ "object": "AttributePicklist",
+ "records": [
+  {
+   "Code": "BATTERY",
+   "DataType": "Text",
+   "Description": "Battery sizes offered on Velora vehicles.",
+   "Name": "Battery",
+   "Status": "Active",
+   "_key": "Battery"
+  },
+  {
+   "Code": "BODY",
+   "DataType": "Text",
+   "Description": "Van body styles.",
+   "Name": "Body",
+   "Status": "Active",
+   "_key": "Body"
+  }
+ ]
+}

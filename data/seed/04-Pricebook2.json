@@ -1,0 +1,14 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "Pricebook2",
+ "records": [
+  {
+   "GlobalKey": "StandardPriceBook",
+   "IsActive": true,
+   "Name": "Standard Price Book",
+   "_key": "Standard Price Book"
+  }
+ ]
+}

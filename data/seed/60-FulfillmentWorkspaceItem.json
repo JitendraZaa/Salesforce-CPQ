@@ -1,0 +1,21 @@
+{
+ "match": [
+  "FulfillmentWorkspaceId",
+  "FulfillmentStepDefinitionGroupId"
+ ],
+ "object": "FulfillmentWorkspaceItem",
+ "records": [
+  {
+   "@FulfillmentStepDefinitionGroupId": {
+    "key": "Fleet delivery",
+    "object": "FulfillmentStepDefinitionGroup"
+   },
+   "@FulfillmentWorkspaceId": {
+    "key": "Swift Fleet Fulfillment",
+    "object": "FulfillmentWorkspace"
+   },
+   "ShowOrder": 1,
+   "_key": "|Swift Fleet Fulfillment|Fleet delivery"
+  }
+ ]
+}

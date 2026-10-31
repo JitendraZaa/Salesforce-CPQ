@@ -1,0 +1,14 @@
+{
+ "match": [
+  "RatingPeriod",
+  "RatingDelayDuration"
+ ],
+ "object": "RatingFrequencyPolicy",
+ "records": [
+  {
+   "Name": "RFP-00000001",
+   "RatingPeriod": "Monthly",
+   "_key": "RFP-00000001"
+  }
+ ]
+}

@@ -1,0 +1,64 @@
+{
+ "match": [
+  "Name",
+  "Product2Id",
+  "AttributeDefinitionId",
+  "OverrideContextId",
+  "OverriddenProductAttributeDefinitionId",
+  "AttributeCategoryId",
+  "ProductClassificationAttributeId"
+ ],
+ "object": "ProductAttributeDefinition",
+ "records": [
+  {
+   "@AttributeDefinitionId": {
+    "key": "Battery",
+    "object": "AttributeDefinition"
+   },
+   "@Product2Id": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "@ProductClassificationAttributeId": {
+    "key": "Battery",
+    "object": "ProductClassificationAttr"
+   },
+   "AttributeNameOverride": "Battery",
+   "DefaultValue": "Standard 60 kWh",
+   "Description": "Battery size of the vehicle.",
+   "IsHidden": false,
+   "IsPriceImpacting": true,
+   "IsReadOnly": false,
+   "IsRequired": true,
+   "Name": "Battery",
+   "Sequence": 2,
+   "Status": "Active",
+   "_key": "Battery"
+  },
+  {
+   "@AttributeDefinitionId": {
+    "key": "Body",
+    "object": "AttributeDefinition"
+   },
+   "@Product2Id": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "@ProductClassificationAttributeId": {
+    "key": "Body",
+    "object": "ProductClassificationAttr"
+   },
+   "AttributeNameOverride": "Body",
+   "DefaultValue": "Panel",
+   "Description": "Body style of the van.",
+   "IsHidden": false,
+   "IsPriceImpacting": true,
+   "IsReadOnly": false,
+   "IsRequired": true,
+   "Name": "Body",
+   "Sequence": 1,
+   "Status": "Active",
+   "_key": "Body"
+  }
+ ]
+}

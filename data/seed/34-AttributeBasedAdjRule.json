@@ -1,0 +1,16 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "AttributeBasedAdjRule",
+ "records": [
+  {
+   "Name": "Rule_1793467984016",
+   "_key": "Rule_1793467984016"
+  },
+  {
+   "Name": "Rule_1793468121545",
+   "_key": "Rule_1793468121545"
+  }
+ ]
+}

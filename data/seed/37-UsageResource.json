@@ -1,0 +1,27 @@
+{
+ "match": [
+  "Name",
+  "DefaultUnitOfMeasureId",
+  "UnitOfMeasureClassId",
+  "UsageDefinitionProductId",
+  "TokenResourceId"
+ ],
+ "object": "UsageResource",
+ "records": [
+  {
+   "@DefaultUnitOfMeasureId": {
+    "key": "kWh",
+    "object": "UnitOfMeasure"
+   },
+   "@UnitOfMeasureClassId": {
+    "key": "Energy",
+    "object": "UnitOfMeasureClass"
+   },
+   "Category": "Usage",
+   "Code": "CHG-KWH",
+   "Name": "Charging Energy",
+   "Status": "Active",
+   "_key": "Charging Energy"
+  }
+ ]
+}

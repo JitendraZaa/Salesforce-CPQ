@@ -1,0 +1,12 @@
+{
+ "match": [],
+ "object": "ProductConfigurationFlow",
+ "records": [
+  {
+   "FlowIdentifier": "Velora_Product_Configurator",
+   "IsDefault": false,
+   "Status": "Active",
+   "_key": ""
+  }
+ ]
+}

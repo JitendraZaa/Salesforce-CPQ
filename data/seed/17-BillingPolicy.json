@@ -1,0 +1,39 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "BillingPolicy",
+ "records": [
+  {
+   "@@DefaultBillingTreatmentId": {
+    "key": "Billing Treatment - Advance",
+    "object": "BillingTreatment"
+   },
+   "BillingTreatmentSelection": "LegalEntity",
+   "Name": "Billing Policy - Advance",
+   "Status": "Active",
+   "_key": "Billing Policy - Advance"
+  },
+  {
+   "@@DefaultBillingTreatmentId": {
+    "key": "Billing Treatment - Arrears",
+    "object": "BillingTreatment"
+   },
+   "BillingTreatmentSelection": "LegalEntity",
+   "Name": "Billing Policy - Arrears",
+   "Status": "Active",
+   "_key": "Billing Policy - Arrears"
+  },
+  {
+   "@@DefaultBillingTreatmentId": {
+    "key": "Velora Advance Treatment",
+    "object": "BillingTreatment"
+   },
+   "BillingTreatmentSelection": "Default",
+   "Description": "Bill each period at its start",
+   "Name": "Velora Advance",
+   "Status": "Active",
+   "_key": "Velora Advance"
+  }
+ ]
+}

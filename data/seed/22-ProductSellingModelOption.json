@@ -1,0 +1,130 @@
+{
+ "match": [
+  "ProductSellingModelId",
+  "Product2Id",
+  "ProrationPolicyId"
+ ],
+ "object": "ProductSellingModelOption",
+ "records": [
+  {
+   "@Product2Id": {
+    "key": "Velora Connect",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "Evergreen - Monthly",
+    "object": "ProductSellingModel"
+   },
+   "@ProrationPolicyId": {
+    "key": "Default Proration Policy",
+    "object": "ProrationPolicy"
+   },
+   "IsDefault": false,
+   "_key": "|Evergreen - Monthly|Velora Connect|Default Proration Policy"
+  },
+  {
+   "@Product2Id": {
+    "key": "Aria",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsDefault": true,
+   "_key": "|One Time|Aria"
+  },
+  {
+   "@Product2Id": {
+    "key": "Charger Installation",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsDefault": true,
+   "_key": "|One Time|Charger Installation"
+  },
+  {
+   "@Product2Id": {
+    "key": "Depot Charger 150 kW",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsDefault": true,
+   "_key": "|One Time|Depot Charger 150 kW"
+  },
+  {
+   "@Product2Id": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsDefault": true,
+   "_key": "|One Time|Volt Van"
+  },
+  {
+   "@Product2Id": {
+    "key": "Volt Van Fleet Package",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsDefault": true,
+   "_key": "|One Time|Volt Van Fleet Package"
+  },
+  {
+   "@Product2Id": {
+    "key": "Wall Charger 11 kW",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "One Time",
+    "object": "ProductSellingModel"
+   },
+   "IsDefault": true,
+   "_key": "|One Time|Wall Charger 11 kW"
+  },
+  {
+   "@Product2Id": {
+    "key": "Depot Charging",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "Term Based - Monthly",
+    "object": "ProductSellingModel"
+   },
+   "@ProrationPolicyId": {
+    "key": "Default Proration Policy",
+    "object": "ProrationPolicy"
+   },
+   "IsDefault": true,
+   "_key": "|Term Based - Monthly|Depot Charging|Default Proration Policy"
+  },
+  {
+   "@Product2Id": {
+    "key": "Velora Connect",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "Term Based - Monthly",
+    "object": "ProductSellingModel"
+   },
+   "@ProrationPolicyId": {
+    "key": "Default Proration Policy",
+    "object": "ProrationPolicy"
+   },
+   "IsDefault": true,
+   "_key": "|Term Based - Monthly|Velora Connect|Default Proration Policy"
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "LegalEntity",
+ "records": [
+  {
+   "Name": "Default Legal Entity - US",
+   "ShouldAttachInvoiceDocToEmail": false,
+   "Status": "Active",
+   "_key": "Default Legal Entity - US"
+  },
+  {
+   "CompanyName": "Velora Motors Inc.",
+   "Description": "The company that issues Velora invoices",
+   "LegalEntityCity": "Oakland",
+   "LegalEntityCountry": "United States",
+   "LegalEntityPostalCode": "94607",
+   "LegalEntityState": "CA",
+   "LegalEntityStreet": "100 Harbour Road",
+   "Name": "Velora Motors Inc.",
+   "ShouldAttachInvoiceDocToEmail": false,
+   "Status": "Active",
+   "_key": "Velora Motors Inc."
+  }
+ ]
+}

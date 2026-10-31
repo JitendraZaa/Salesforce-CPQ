@@ -1,0 +1,89 @@
+{
+ "match": [
+  "ChildProductId",
+  "ChildProductClassificationId",
+  "ChildSellingModelId",
+  "ProductComponentGroupId"
+ ],
+ "object": "ProductRelatedComponent",
+ "records": [
+  {
+   "@ChildProductId": {
+    "key": "Velora Connect",
+    "object": "Product2"
+   },
+   "@ParentProductId": {
+    "key": "Volt Van Fleet Package",
+    "object": "Product2"
+   },
+   "@ProductComponentGroupId": {
+    "key": "Services",
+    "object": "ProductComponentGroup"
+   },
+   "@ProductRelationshipTypeId": {
+    "Name": "Bundle to Bundle Component Relationship",
+    "object": "ProductRelationshipType"
+   },
+   "DoesBundlePriceIncludeChild": false,
+   "IsComponentRequired": true,
+   "IsDefaultComponent": true,
+   "IsQuantityEditable": false,
+   "Quantity": 1.0,
+   "QuantityScaleMethod": "Proportional",
+   "QuoteVisibility": "Always",
+   "_key": "|Velora Connect|Services"
+  },
+  {
+   "@ChildProductId": {
+    "key": "Volt Van",
+    "object": "Product2"
+   },
+   "@ParentProductId": {
+    "key": "Volt Van Fleet Package",
+    "object": "Product2"
+   },
+   "@ProductComponentGroupId": {
+    "key": "Vehicle",
+    "object": "ProductComponentGroup"
+   },
+   "@ProductRelationshipTypeId": {
+    "Name": "Bundle to Bundle Component Relationship",
+    "object": "ProductRelationshipType"
+   },
+   "DoesBundlePriceIncludeChild": false,
+   "IsComponentRequired": true,
+   "IsDefaultComponent": true,
+   "IsQuantityEditable": false,
+   "Quantity": 1.0,
+   "QuantityScaleMethod": "Proportional",
+   "QuoteVisibility": "Always",
+   "_key": "|Volt Van|Vehicle"
+  },
+  {
+   "@ChildProductId": {
+    "key": "Wall Charger 11 kW",
+    "object": "Product2"
+   },
+   "@ParentProductId": {
+    "key": "Volt Van Fleet Package",
+    "object": "Product2"
+   },
+   "@ProductComponentGroupId": {
+    "key": "Accessories",
+    "object": "ProductComponentGroup"
+   },
+   "@ProductRelationshipTypeId": {
+    "Name": "Bundle to Bundle Component Relationship",
+    "object": "ProductRelationshipType"
+   },
+   "DoesBundlePriceIncludeChild": false,
+   "IsComponentRequired": false,
+   "IsDefaultComponent": false,
+   "IsQuantityEditable": false,
+   "Quantity": 1.0,
+   "QuantityScaleMethod": "Proportional",
+   "QuoteVisibility": "Always",
+   "_key": "|Wall Charger 11 kW|Accessories"
+  }
+ ]
+}

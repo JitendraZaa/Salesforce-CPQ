@@ -1,0 +1,21 @@
+{
+ "match": [
+  "ProductId",
+  "ProductSellingModelId"
+ ],
+ "object": "ProductRampSegment",
+ "records": [
+  {
+   "@ProductId": {
+    "key": "Velora Connect",
+    "object": "Product2"
+   },
+   "@ProductSellingModelId": {
+    "key": "Term Based - Monthly",
+    "object": "ProductSellingModel"
+   },
+   "SegmentType": "Custom",
+   "_key": "|Velora Connect|Term Based - Monthly"
+  }
+ ]
+}

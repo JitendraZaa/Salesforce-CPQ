@@ -1,0 +1,32 @@
+{
+ "match": [
+  "Name"
+ ],
+ "object": "Account",
+ "records": [
+  {
+   "BillingCity": "Sacramento",
+   "BillingCountry": "United States",
+   "BillingState": "CA",
+   "Description": "Velora dealer for the Sacramento area. Sells the Aria to private buyers and small fleets.",
+   "Has_Depot__c": false,
+   "Industry": "Retail",
+   "Name": "Brightside Motors",
+   "Type": "Channel Partner / Reseller",
+   "_key": "Brightside Motors"
+  },
+  {
+   "Has_Depot__c": false,
+   "Name": "Crumb & Co Bakery",
+   "Phone": "(555) 014-2290",
+   "Website": "www.crumbandco.example",
+   "_key": "Crumb & Co Bakery"
+  },
+  {
+   "AccountSource": "Web",
+   "Has_Depot__c": true,
+   "Name": "Swift Couriers",
+   "_key": "Swift Couriers"
+  }
+ ]
+}

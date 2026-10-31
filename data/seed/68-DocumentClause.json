@@ -1,0 +1,39 @@
+{
+ "match": [
+  "Name",
+  "DocumentClauseSetId"
+ ],
+ "object": "DocumentClause",
+ "records": [
+  {
+   "@DocumentClauseSetId": {
+    "key": "Battery Warranty",
+    "object": "DocumentClauseSet"
+   },
+   "Content": "Velora Motors warrants the battery of each Volt Van against defects for <<Years>> years from delivery.",
+   "Description": "Battery warranty term on every Volt Van in a fleet agreement",
+   "Format": "Non_Formatted",
+   "IsAlternateClause": false,
+   "Language": "en_US",
+   "Name": "Battery Warranty for Fleet Vans",
+   "Status": "Active",
+   "Version": 1,
+   "_key": "Battery Warranty for Fleet Vans"
+  },
+  {
+   "@DocumentClauseSetId": {
+    "key": "Data Ownership",
+    "object": "DocumentClauseSet"
+   },
+   "Content": "Telematics data produced by the vehicles under this agreement belongs to the customer. Velora Motors uses it only to provide the Velora Connect service.",
+   "Description": "Who owns the data the vans produce",
+   "Format": "Non_Formatted",
+   "IsAlternateClause": false,
+   "Language": "en_US",
+   "Name": "Fleet Telematics Data Ownership",
+   "Status": "Active",
+   "Version": 1,
+   "_key": "Fleet Telematics Data Ownership"
+  }
+ ]
+}

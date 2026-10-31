@@ -20,6 +20,12 @@ person, product, price and number in it is an invented example.** Words are expl
 - For the developer path, a second org for the test run, and a GitHub repository with four secrets (see
   [docs/ci-setup.md](docs/ci-setup.md)).
 
+## Rebuild everything in a new org
+
+If your org expires, or you want the whole series in a fresh one, follow [docs/REBUILD.md](docs/REBUILD.md): create a
+scratch org from `config/revenue-cloud-scratch-def.json`, run `sh scripts/setup-org.sh <alias>` (settings, all metadata,
+permission sets, and the data in `data/seed/`), then do the few clicks the page lists.
+
 ## Connect your org
 
 ```sh

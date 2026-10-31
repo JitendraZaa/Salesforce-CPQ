@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>Access to the fields Velora Motors adds to standard objects.</description>
+    <description>Access to the fields Velora Motors adds to standard objects, and to the Commercial and Technical product record types.</description>
     <fieldPermissions>
         <editable>true</editable>
         <field>Account.Has_Depot__c</field>
@@ -13,4 +13,12 @@
     </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Velora Fields</label>
+    <recordTypeVisibilities>
+        <recordType>Product2.Commercial</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
+    <recordTypeVisibilities>
+        <recordType>Product2.Technical</recordType>
+        <visible>true</visible>
+    </recordTypeVisibilities>
 </PermissionSet>

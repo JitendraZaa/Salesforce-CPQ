@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Short</fullName>
+        <default>true</default>
+        <label>Short Term (Less than 1 Year)</label>
+    </customValue>
+    <customValue>
+        <fullName>Medium</fullName>
+        <default>false</default>
+        <label>Medium Term (1 - 3 Years)</label>
+    </customValue>
+    <customValue>
+        <fullName>Long</fullName>
+        <default>false</default>
+        <label>Long Term (4 - 5 Years)</label>
+    </customValue>
+    <customValue>
+        <fullName>Evergreen</fullName>
+        <default>false</default>
+        <label>Evergreen (Greater than 5 Years)</label>
+    </customValue>
+    <masterLabel>Proposal Duration</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

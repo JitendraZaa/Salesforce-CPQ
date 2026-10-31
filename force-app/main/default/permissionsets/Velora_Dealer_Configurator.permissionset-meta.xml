@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Lets Velora dealer partner users configure bundles such as the Volt Van Fleet Package. Salesforce does not allow the standard Product Configurator permission set on Experience Cloud users, so this custom set grants the same user permission.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Velora Dealer Configurator</label>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ProductConfiguratorUser</name>
+    </userPermissions>
+</PermissionSet>

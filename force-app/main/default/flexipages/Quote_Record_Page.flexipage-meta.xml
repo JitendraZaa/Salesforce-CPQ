@@ -99,6 +99,9 @@
                         <valueListItems>
                             <value>QuoteLineItem.TotalPrice</value>
                         </valueListItems>
+                        <valueListItems>
+                            <value>QuoteLineItem.NetUnitPrice</value>
+                        </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
                 <componentInstanceProperties>

@@ -1,0 +1,4 @@
+SELECT Id, Name, Sequence
+FROM ProductClassificationAttr
+WHERE ProductClassification.Name = 'Electric Vehicle'
+ORDER BY Sequence

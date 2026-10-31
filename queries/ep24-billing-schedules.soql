@@ -1,0 +1,4 @@
+SELECT BillingScheduleNumber, BillingType, BillingTermUnit, BillDayOfMonth, NextBillingDate, TotalAmount, Status
+FROM BillingSchedule
+WHERE ReferenceEntity.Name = '00000121'
+ORDER BY NextBillingDate

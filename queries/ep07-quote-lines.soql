@@ -1,0 +1,4 @@
+SELECT Product2.Name, ProductSellingModel.Name, Quantity, StartDate, EndDate, NetUnitPrice, TotalPrice
+FROM QuoteLineItem
+WHERE Quote.Name = 'Swift Couriers Pilot Quote'
+ORDER BY Product2.Name

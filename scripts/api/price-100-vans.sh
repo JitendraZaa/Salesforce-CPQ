@@ -4,7 +4,8 @@
 # scripts/ep15-pricing-body.json. Expected net unit price: 44,640 (48,000 less the 7 percent volume tier).
 # Usage: sh scripts/api/price-100-vans.sh [--save] [org alias]   (default org when none is given)
 #   It prints the three prices and the pricing steps that changed the price.
-#   --save also writes the whole response, readable, to out/pricing-response.json (open it in VS Code).
+#   --save also writes the filled-in request to out/pricing-body.json and the whole response, readable, to
+#   out/pricing-response.json (open both in VS Code).
 # The body's keys are the attribute names of the context definition's nodes (SalesTransaction and
 # SalesTransactionItem); SalesTransactionItemSource carries the line id the pricing procedure looks for.
 # @author Jitendra Zaa
@@ -24,6 +25,7 @@ ENTRY=$(need_id "SELECT Id FROM PricebookEntry WHERE Product2Id = '$VAN' AND Pri
 
 BODY=$(mktemp)
 trap 'rm -f "$BODY"' EXIT
+if [ "$SAVE" = 1 ]; then mkdir -p out; fi
 python3 - "$BODY" "$CONTEXT" "$MAPPING" "$BOOK" "$VAN" "$ENTRY" "$ONETIME" <<'PY'
 import json, sys
 out, context, mapping, book, van, entry, model = sys.argv[1:8]
@@ -38,6 +40,7 @@ line["Product"], line["PricebookEntry"], line["ProductSellingModel"] = van, entr
 body["jsonDataString"] = json.dumps(body["jsonDataString"])
 json.dump(body, open(out, "w"))
 PY
+if [ "$SAVE" = 1 ]; then python3 -m json.tool "$BODY" > out/pricing-body.json; fi
 
 # shellcheck disable=SC2086
 RESPONSE=$(sf api request rest "/services/data/v68.0/connect/core-pricing/pricing" --method POST --body @"$BODY" $ORG_FLAG)

@@ -1,0 +1,22 @@
+{
+  "orgName": "Velora Motors QA",
+  "edition": "Enterprise",
+  "features": [
+    "EnableSetPasswordInApi",
+    "CoreCpq",
+    "SalesforcePricing",
+    "ProductCatalogManagementAddOn",
+    "DecisionTable",
+    "BusinessRulesEngine",
+    "BillingAdvanced",
+    "InvoiceManagement",
+    "UsageManagement",
+    "RateManagement",
+    "RevSubscriptionManagement"
+  ],
+  "settings": {
+    "lightningExperienceSettings": { "enableS1DesktopEnabled": true },
+    "quoteSettings": { "enableQuote": true },
+    "orderSettings": { "enableOrders": true }
+  }
+}

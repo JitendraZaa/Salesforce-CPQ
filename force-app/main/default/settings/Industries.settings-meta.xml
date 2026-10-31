@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IndustriesSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableContractMgmtPref>true</enableContractMgmtPref>
+    <enableDesignDocumentTemplate>true</enableDesignDocumentTemplate>
+    <enableDiscoveryFrameworkMetadata>true</enableDiscoveryFrameworkMetadata>
+    <enableDiscoveryFrwrkSampleTemplate>true</enableDiscoveryFrwrkSampleTemplate>
+    <enableEnhancedQuestionCreation>true</enableEnhancedQuestionCreation>
+    <enableIndustriesAssessment>true</enableIndustriesAssessment>
+    <enableMicrosoftWordAddInEnabled>true</enableMicrosoftWordAddInEnabled>
+    <enablePCMConfigRules>true</enablePCMConfigRules>
+    <enableTimelineCachePref>true</enableTimelineCachePref>
+</IndustriesSettings>

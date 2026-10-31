@@ -57,3 +57,9 @@ sign-in step.
 
 The workflow skips every run until the repository variable `CI_ENABLED` is `true`. After adding the four secrets,
 set it under Settings, Secrets and variables, Actions, Variables, or with `gh variable set CI_ENABLED --body true`.
+
+## The fleet discount approval flow
+
+`flows/Velora_Fleet_Discount_Approval.flow-meta.xml` sends the manager step to the quote owner's manager (the
+user's Manager field). In the video the approver was picked by hand in Flow Builder; set a Manager on your quoting
+user, or pick your approver in Flow Builder after deploying, before you activate the flow.

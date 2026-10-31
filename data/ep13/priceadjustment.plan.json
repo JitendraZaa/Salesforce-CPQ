@@ -1,0 +1,14 @@
+[
+  {
+    "sobject": "PriceAdjustmentSchedule",
+    "saveRefs": true,
+    "resolveRefs": false,
+    "files": ["PriceAdjustmentSchedule.json"]
+  },
+  {
+    "sobject": "PriceAdjustmentTier",
+    "saveRefs": false,
+    "resolveRefs": true,
+    "files": ["PriceAdjustmentTier.json"]
+  }
+]

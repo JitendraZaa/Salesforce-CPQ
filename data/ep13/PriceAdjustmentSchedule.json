@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "PriceAdjustmentSchedule", "referenceId": "VoltVanFleetTiers" },
+      "Name": "Volt Van Fleet Tiers",
+      "ScheduleType": "Volume",
+      "AdjustmentMethod": "Range",
+      "IsActive": true,
+      "EffectiveFrom": "{{EFFECTIVE_FROM}}"
+    }
+  ]
+}

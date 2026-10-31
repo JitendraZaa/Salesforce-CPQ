@@ -1,0 +1,12 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Product2", "referenceId": "VoltVan" },
+      "Name": "Volt Van",
+      "ProductCode": "VV-100",
+      "IsActive": true,
+      "Family": "Vehicles",
+      "Description": "Electric delivery van for business fleets."
+    }
+  ]
+}

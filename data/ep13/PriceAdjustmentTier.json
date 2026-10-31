@@ -1,0 +1,36 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "PriceAdjustmentTier", "referenceId": "TierOne" },
+      "PriceAdjustmentScheduleId": "@VoltVanFleetTiers",
+      "LowerBound": 1,
+      "UpperBound": 25,
+      "TierType": "AdjustmentPercentage",
+      "TierValue": 0,
+      "EffectiveFrom": "{{EFFECTIVE_FROM}}",
+      "Product2Id": "{{VOLT_VAN_ID}}",
+      "ProductSellingModelId": "{{ONE_TIME_ID}}"
+    },
+    {
+      "attributes": { "type": "PriceAdjustmentTier", "referenceId": "TierTwo" },
+      "PriceAdjustmentScheduleId": "@VoltVanFleetTiers",
+      "LowerBound": 25,
+      "UpperBound": 100,
+      "TierType": "AdjustmentPercentage",
+      "TierValue": 4,
+      "EffectiveFrom": "{{EFFECTIVE_FROM}}",
+      "Product2Id": "{{VOLT_VAN_ID}}",
+      "ProductSellingModelId": "{{ONE_TIME_ID}}"
+    },
+    {
+      "attributes": { "type": "PriceAdjustmentTier", "referenceId": "TierThree" },
+      "PriceAdjustmentScheduleId": "@VoltVanFleetTiers",
+      "LowerBound": 100,
+      "TierType": "AdjustmentPercentage",
+      "TierValue": 7,
+      "EffectiveFrom": "{{EFFECTIVE_FROM}}",
+      "Product2Id": "{{VOLT_VAN_ID}}",
+      "ProductSellingModelId": "{{ONE_TIME_ID}}"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Episode 40: the pricing procedure (an expression set). Read the retrieved file's references and add the context
+     definitions and decision tables it depends on to manifest/ep40-deps.xml. -->
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Velora_Pricing_Procedure</members>
+        <name>ExpressionSetDefinition</name>
+    </types>
+    <version>66.0</version>
+</Package>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Episode 40: the immediate dependencies of the pricing procedure, deployed first when the validation asks for them.
+     Edit the members to match the references in the retrieved expression set. -->
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>*</members>
+        <name>ContextDefinition</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>DecisionTable</name>
+    </types>
+    <version>66.0</version>
+</Package>

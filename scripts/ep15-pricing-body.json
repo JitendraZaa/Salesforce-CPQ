@@ -1,0 +1,30 @@
+{
+  "contextDefinitionId": "<ID of RevSalesTransactionContext>",
+  "contextMappingId": "<ID of QuoteEntitiesMapping>",
+  "pricingProcedureId": "Velora_Pricing",
+  "jsonDataString": {
+    "SalesTransaction": [
+      {
+        "id": "quote_1",
+        "businessObjectType": "Quote",
+        "Pricebook": "<standard price book ID>",
+        "SalesTransactionItem": [
+          {
+            "id": "line_1",
+            "line_item_id": "line_1",
+            "businessObjectType": "QuoteLineItem",
+            "Product": "<Volt Van product ID>",
+            "PricebookEntry": "<Volt Van One Time price book entry ID>",
+            "ProductSellingModel": "<One Time selling model ID>",
+            "SellingModelType": "OneTime",
+            "Quantity": 100,
+            "UnitPrice": 48000,
+            "ListPrice": 48000,
+            "NetUnitPrice": 0
+          }
+        ]
+      }
+    ]
+  },
+  "configurationOverrides": { "skipWaterfall": false, "persistContext": false }
+}

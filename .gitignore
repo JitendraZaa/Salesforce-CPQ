@@ -46,3 +46,9 @@ $RECYCLE.BIN/
 **/__pycache__/
 **/.venv/
 **/venv/
+
+# Keys and generated request files
+server.key
+server.crt
+scripts/api/renew-swift.json
+scripts/api/renew-swift.response.json

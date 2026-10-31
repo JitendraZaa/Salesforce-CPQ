@@ -8,7 +8,7 @@ Velora's own active pricing procedure, Velora Pricing, cloned from the default o
 
 Starting point: tag `ep11-end`. The configurator flow is cloned, the pilot quote for Swift Couriers carries the Volt Van Fleet Package, Salesforce Pricing is on and synced, and the default pricing procedure exists. Your user needs the Salesforce Pricing Design Time User and Run Time User permission sets.
 
-To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep11-end --org <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
+To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep11-end <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
 
 ## Click path
 

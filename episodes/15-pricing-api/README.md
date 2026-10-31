@@ -8,7 +8,7 @@ A price request sent from a terminal instead of a quote. The call asks Velora Pr
 
 Starting point: tag `ep14-end`. Velora Pricing is active and the waterfall is on for API responses. You need the Salesforce CLI logged in to the org (an alias), and a user with the pricing and API permission sets.
 
-To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep14-end --org <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
+To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep14-end <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
 
 ## Click path
 

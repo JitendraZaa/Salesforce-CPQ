@@ -8,7 +8,7 @@ A printable PDF of quote V1 that Swift can read: a quote template named Velora F
 
 Starting point: tag `ep16-end`. Quote V1 holds Swift's full Year 1 fleet and is Approved. Document Builder is part of the Growth and Advanced licences. You need Customize Application and the Document Builder User permission set.
 
-To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep16-end --org <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
+To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep16-end <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
 
 ## Click path
 

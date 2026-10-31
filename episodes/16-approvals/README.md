@@ -8,7 +8,7 @@ A deal discount that needs a manager's yes. The fleet quote V1 (Swift's complete
 
 Starting point: tag `ep15-end`. Quote V1 (00000036) already exists from episode 13 and is not rebuilt. Velora Pricing has its manual discount elements. You need Customize Application and Approval Designer permissions. The example users Priya Raman (sales rep) and Daniel Brooks (manager) may have to be created.
 
-To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep15-end --org <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
+To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep15-end <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
 
 ## Click path
 

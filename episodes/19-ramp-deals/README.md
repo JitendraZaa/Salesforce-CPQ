@@ -8,7 +8,7 @@ Swift's three-year plan with a different quantity each year. Quote V2 is grouped
 
 Starting point: tag `ep18-end`. V2 (quote 00000037) is the primary quote, approved and printed. Clone Quotes and Orders is on. You need Customize Application. Ramp deals are on the Growth, Advanced and Billing licences.
 
-To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep18-end --org <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
+To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep18-end <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
 
 ## Click path
 

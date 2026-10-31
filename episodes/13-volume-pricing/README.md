@@ -8,7 +8,7 @@ Volume discounts for the Volt Van, and the option prices for the configured van.
 
 Starting point: tag `ep12-end`. Velora Pricing is active and the default, with Pricing Setting and List Price, and the price waterfall is on. Your user needs the Salesforce Pricing Design Time permission set.
 
-To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep12-end --org <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
+To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep12-end <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
 
 ## Click path
 

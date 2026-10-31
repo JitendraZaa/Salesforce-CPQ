@@ -8,7 +8,7 @@ Velora's own copy of the Product Configurator flow. The Volt Van Fleet Package o
 
 Starting point: the org as episode 10 left it (tag `ep10-end`). The package, its rules and the qualification rule work, and the configurator still shows Salesforce's default layout with Battery before Body. Three things must already be true: Configure Products at Runtime is on in Revenue Settings, your user holds the Product Configurator permission, and the Volt Van Fleet Package allows Configure During Sale.
 
-To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep10-end --org <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
+To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep10-end <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
 
 ## Click path
 

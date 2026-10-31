@@ -8,7 +8,7 @@ A second version of Swift's quote. V1 is cloned with Deep Clone into V2, V2 drop
 
 Starting point: tag `ep17-end`. V1 (quote 00000036) is approved and has its PDF. Clone Quotes and Orders is off and Document Builder is on. You need Customize Application. The users Priya Raman and Daniel Brooks exist from episode 16.
 
-To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep17-end --org <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
+To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep17-end <your org alias>`. The script loads the data and lists the steps that must be done by hand. A git tag restores files only, never the org, so do not rely on `git checkout` to rebuild the org.
 
 ## Click path
 

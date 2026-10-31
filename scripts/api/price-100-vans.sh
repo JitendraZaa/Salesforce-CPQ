@@ -2,12 +2,16 @@
 # Prices 100 Volt Vans with the Pricing API (POST /connect/core-pricing/pricing) and prints the response.
 # The ids differ in every org, so they are looked up by name here and filled into a temporary copy of
 # scripts/ep15-pricing-body.json. Expected net unit price: 44,640 (48,000 less the 7 percent volume tier).
-# Usage: sh scripts/api/price-100-vans.sh [org alias]   (default org when none is given)
+# Usage: sh scripts/api/price-100-vans.sh [--save] [org alias]   (default org when none is given)
+#   It prints the three prices and the pricing steps that changed the price.
+#   --save also writes the whole response, readable, to out/pricing-response.json (open it in VS Code).
 # The body's keys are the attribute names of the context definition's nodes (SalesTransaction and
 # SalesTransactionItem); SalesTransactionItemSource carries the line id the pricing procedure looks for.
 # @author Jitendra Zaa
 set -e
 cd "$(dirname "$0")/../.."
+SAVE=0
+if [ "$1" = "--save" ]; then SAVE=1; shift; fi
 if [ -n "$1" ]; then TARGET_ORG="$1"; fi
 . scripts/lib/common.sh
 
@@ -36,8 +40,26 @@ json.dump(body, open(out, "w"))
 PY
 
 # shellcheck disable=SC2086
-sf api request rest "/services/data/v68.0/connect/core-pricing/pricing" --method POST --body @"$BODY" $ORG_FLAG | python3 -c "
-import json, sys
-result = json.load(sys.stdin)['pricingResult']
+RESPONSE=$(sf api request rest "/services/data/v68.0/connect/core-pricing/pricing" --method POST --body @"$BODY" $ORG_FLAG)
+echo "$RESPONSE" | python3 -c "
+import html, json, sys
+save = sys.argv[1] == '1'
+response = json.load(sys.stdin)
+result = response['pricingResult']
 for key in ('ListPrice', 'NetUnitPrice', 'NetTotalPrice'):
-    print(key, result[key][0]['value'])"
+    print(key, result[key][0]['value'])
+# The price waterfall comes back as escaped text; turn it into JSON to read the steps.
+waterfall = json.loads(html.unescape(result['PriceWaterFall'][0]['value']))
+print('Steps that changed the price:')
+for step in waterfall['waterfall']:
+    element = step['pricingElement']
+    for adjustment in element['adjustments']:
+        if adjustment.get('AdjustmentValue'):
+            print(' ', element['elementType'], element['name'], adjustment['AdjustmentValue'], adjustment['AdjustmentType'])
+if save:
+    result['PriceWaterFall'][0]['value'] = waterfall
+    import os
+    os.makedirs('out', exist_ok=True)
+    json.dump(response, open('out/pricing-response.json', 'w'), indent=2)
+    print('Whole response saved to out/pricing-response.json')
+" "$SAVE"

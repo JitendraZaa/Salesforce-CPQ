@@ -1,0 +1,25 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Account", "referenceId": "BrightsideRef" },
+      "Name": "Brightside Motors",
+      "Type": "Channel Partner / Reseller",
+      "Industry": "Retail",
+      "BillingCity": "Sacramento",
+      "BillingState": "CA",
+      "BillingCountry": "United States",
+      "Description": "Velora dealer for the Sacramento area. Sells the Aria to private buyers and small fleets.",
+      "Contacts": {
+        "records": [
+          {
+            "attributes": { "type": "Contact", "referenceId": "SamRef" },
+            "FirstName": "Sam",
+            "LastName": "Okafor",
+            "Title": "Sales Manager",
+            "Email": "sam.okafor@example.com"
+          }
+        ]
+      }
+    }
+  ]
+}

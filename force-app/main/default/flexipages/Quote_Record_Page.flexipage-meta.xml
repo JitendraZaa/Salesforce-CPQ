@@ -59,19 +59,8 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
-                    <name>defaultState</name>
-                    <value>false</value>
+                    <name>displayActions</name>
                 </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>displayTotalPriceBreakdown</name>
-                    <value>true</value>
-                </componentInstanceProperties>
-                <componentName>runtime_revenue_foundation:transactionSummary</componentName>
-                <identifier>runtime_revenue_foundation_transactionSummary</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
                 <componentInstanceProperties>
                     <name>displayFields</name>
                     <valueList>
@@ -82,25 +71,22 @@
                             <value>QuoteLineItem.Quantity</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>QuoteLineItem.ProductSellingModel.Name[ProductSellingModel]</value>
+                            <value>QuoteLineItem.StartDate</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>QuoteLineItem.StartDate</value>
+                            <value>QuoteLineItem.UnitPriceUplift</value>
                         </valueListItems>
                         <valueListItems>
                             <value>QuoteLineItem.EndDate</value>
                         </valueListItems>
                         <valueListItems>
-                            <value>QuoteLineItem.BillingFrequency</value>
+                            <value>QuoteLineItem.NetUnitPrice</value>
+                        </valueListItems>
+                        <valueListItems>
+                            <value>QuoteLineItem.NetTotalPrice</value>
                         </valueListItems>
                         <valueListItems>
                             <value>QuoteLineItem.ListPrice</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>QuoteLineItem.TotalPrice</value>
-                        </valueListItems>
-                        <valueListItems>
-                            <value>QuoteLineItem.NetUnitPrice</value>
                         </valueListItems>
                     </valueList>
                 </componentInstanceProperties>
@@ -112,8 +98,22 @@
                     <name>enableSidepanel</name>
                     <value>true</value>
                 </componentInstanceProperties>
-                <componentName>runtime_revenue_foundation:transactionLineTable</componentName>
-                <identifier>runtime_revenue_foundation_transactionLineTable</identifier>
+                <componentName>runtime_rca:salesTxnLineTable</componentName>
+                <identifier>runtime_rca_salesTxnLineTable</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>defaultState</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>displayTotalPriceBreakdown</name>
+                    <value>true</value>
+                </componentInstanceProperties>
+                <componentName>runtime_revenue_foundation:transactionSummary</componentName>
+                <identifier>runtime_revenue_foundation_transactionSummary</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

@@ -6,6 +6,11 @@
         <field>Account.Has_Depot__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>ProductDisqualification.Has_Depot__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
     <hasActivationRequired>false</hasActivationRequired>
     <label>Velora Fields</label>
 </PermissionSet>

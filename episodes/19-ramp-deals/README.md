@@ -2,7 +2,7 @@
 
 ## What this episode builds
 
-Swift's three-year plan with a different quantity each year. Quote V2 is grouped as Year 1, ramped as a group, and cloned into Years 2 and 3. Velora Connect grows from 100 to 200 to 300 vehicles with a 3 percent yearly uplift, and the deal metrics (annual charges, TCV, ACV, CMRR) are read from a query.
+Swift's three-year plan with a different quantity each year. Quote V2 is grouped as Year 1, ramped as a group, and cloned into Years 2 and 3. Velora Connect grows from 100 to 200 to 300 vehicles and the deal metrics (annual charges, TCV, ACV, CMRR) are read from a query.
 
 ## Before you start
 
@@ -12,13 +12,13 @@ To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep18-en
 
 ## Click path
 
-1. In Setup, Revenue Settings, turn on Ramp Deals for Groups in Quotes and Orders (Groups and Clone Quotes and Orders must already be on). Leave Multiple Ramp Schedules Per Transaction off. Turn on Advanced Detail Line Pricing and set the default Ramp Uplift Type to compound.
+1. In Setup, Revenue Settings, turn on Ramp Deals for Groups in Quotes and Orders (Groups and Clone Quotes and Orders must already be on). Leave Multiple Ramp Schedules Per Transaction off. The default Ramp Uplift Type stays Standard (Compound needs Advanced Detail Line Pricing).
 2. Check Velora Pricing and the configurator flow include the latest ramp elements. If the procedure was cloned before the ramp update, clone the latest default again and re-add Velora's own steps.
 3. In Lightning App Builder open the Quote Record Page, select the Sales Transaction Line Editor and show Start Date, End Date, Segment Type, Is Ramped and the group name; add Unit Price Uplift. The older Transaction Line Editor does not support group ramps.
 4. On V2 switch the quote page to the Sales Transaction Line Editor. Add a group named Year 1 and move all of V2's lines into it. Click the group name, enter the Year 1 start and end dates, turn on Is Ramped, choose segment type Custom, and save.
 5. Clone the segment to make Year 2 and build Year 3 (if Clone Segment gives an empty segment, build it by hand). In Years 2 and 3 keep one Standard Panel package line of 100 vans with the 12 percent discount, and remove the one-time items of Year 1.
 6. Because Connect sits inside the package, show the earlier vans' plans continuing as a separate Velora Connect line: 100 in Year 2 and 200 in Year 3.
-7. Set Unit Price Uplift 3 percent, compound, on Connect. Reprice All, click the net unit price and read the waterfall.
+7. Reprice All and read each segment's totals. The 3 percent yearly uplift on Connect is not applied in this org: the pricing procedure has no Uplift step, so Connect stays 29 in every year (the video explains the uplift separately).
 8. Run the metrics query (see files) to read the three Connect rows and work out the annual charges, TCV and ACV.
 
 ## Files in this repo used by this episode

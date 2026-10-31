@@ -1,9 +1,59 @@
 {
   "records": [
-    { "attributes": { "type": "Product2", "referenceId": "Aria" }, "Name": "Aria", "ProductCode": "AR-200", "IsActive": true, "Description": "Electric car for private buyers." },
-    { "attributes": { "type": "Product2", "referenceId": "DepotCharger" }, "Name": "Depot Charger 150 kW", "ProductCode": "DC-150", "IsActive": true, "Description": "Shared fast charger for a business vehicle depot." },
-    { "attributes": { "type": "Product2", "referenceId": "Installation" }, "Name": "Charger Installation", "ProductCode": "SV-INST", "IsActive": true, "Description": "One-time installation of a depot charger." },
-    { "attributes": { "type": "Product2", "referenceId": "WallCharger" }, "Name": "Wall Charger 11 kW", "ProductCode": "WC-11", "IsActive": true, "Description": "Home charger for one vehicle." },
-    { "attributes": { "type": "Product2", "referenceId": "Connect" }, "Name": "Velora Connect", "ProductCode": "VC-SUB", "IsActive": true, "Description": "Telematics for one vehicle, billed per month." }
+    {
+      "attributes": {
+        "type": "Product2",
+        "referenceId": "Aria"
+      },
+      "Name": "Aria",
+      "ProductCode": "AR-200",
+      "IsActive": true,
+      "Description": "Velora's electric car for private buyers. Five seats, two trims, three colours, up to 480 km of range.",
+      "Family": "Vehicles"
+    },
+    {
+      "attributes": {
+        "type": "Product2",
+        "referenceId": "DepotCharger"
+      },
+      "Name": "Depot Charger 150 kW",
+      "ProductCode": "DC-150",
+      "IsActive": true,
+      "Description": "150 kW DC fast charger for a business depot. Charges two vans at once and reports energy use per bay.",
+      "Family": "Charging"
+    },
+    {
+      "attributes": {
+        "type": "Product2",
+        "referenceId": "Installation"
+      },
+      "Name": "Charger Installation",
+      "ProductCode": "SV-INST",
+      "IsActive": true,
+      "Description": "Site survey, cabling, mounting and commissioning of one depot charger by Velora's certified electricians.",
+      "Family": "Services"
+    },
+    {
+      "attributes": {
+        "type": "Product2",
+        "referenceId": "WallCharger"
+      },
+      "Name": "Wall Charger 11 kW",
+      "ProductCode": "WC-11",
+      "IsActive": true,
+      "Description": "11 kW wall charger for a home garage or driveway. Charges an Aria overnight from an ordinary supply.",
+      "Family": "Charging"
+    },
+    {
+      "attributes": {
+        "type": "Product2",
+        "referenceId": "Connect"
+      },
+      "Name": "Velora Connect",
+      "ProductCode": "VC-SUB",
+      "IsActive": true,
+      "Description": "Telematics for one vehicle: live location, battery health, driver behaviour and service alerts, paid monthly.",
+      "Family": "Subscriptions"
+    }
   ]
 }

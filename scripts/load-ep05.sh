@@ -1,5 +1,5 @@
 #!/bin/sh
-# Loads the products Velora Motors sells besides the Volt Van, and gives the one-time ones their selling model and
+# Loads the products Velora Motors sells besides the Volt Van, puts every product in its family, and gives the one-time ones their selling model and
 # list price in the standard price book. Velora Connect gets its prices in episode 7.
 # Usage: sh scripts/load-ep05.sh   (default org, or TARGET_ORG=<alias>); does nothing when the products already exist.
 set -e
@@ -9,6 +9,8 @@ if [ -n "$(first_id "SELECT Id FROM Product2 WHERE ProductCode = 'AR-200'")" ]; 
   exit 0
 fi
 sf data import tree --files data/ep05/Product2.json $ORG_FLAG
+# The Volt Van from episode 3 joins the Vehicles family and gets its full description.
+sf data update record --sobject Product2 --where "ProductCode='VV-100'" --values "Family=Vehicles Description='Electric panel van for urban deliveries. Two batteries, panel or refrigerated body, up to 350 km of range.'" $ORG_FLAG
 q() { sf data query --query "$1" --json $ORG_FLAG | python3 -c "import json,sys; print(json.load(sys.stdin)['result']['records'][0]['Id'])"; }
 BOOK=$(q "SELECT Id FROM Pricebook2 WHERE IsStandard = true")
 ONETIME=$(q "SELECT Id FROM ProductSellingModel WHERE SellingModelType = 'OneTime' AND Status = 'Active' LIMIT 1")

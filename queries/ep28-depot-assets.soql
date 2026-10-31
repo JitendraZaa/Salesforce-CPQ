@@ -1,0 +1,4 @@
+SELECT Id, Name, LifecycleStartDate, LifecycleEndDate
+FROM Asset
+WHERE Product2.ProductCode = 'US-KWH'
+  AND LifecycleStartDate = 2026-09-01T00:00:00Z

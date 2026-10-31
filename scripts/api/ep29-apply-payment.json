@@ -1,0 +1,16 @@
+{
+  "inputs": [
+    {
+      "paymentId": "0aQg70000008YR7EAM",
+      "appliedToId": "5TVg7000000BFRyGAO",
+      "amount": 1160,
+      "comments": "Connect for the 40 Standard Panel vans, paid in full"
+    },
+    {
+      "paymentId": "0aQg70000008YR7EAM",
+      "appliedToId": "5TVg7000000BFRxGAO",
+      "amount": 1392,
+      "comments": "Connect for 48 of the 60 refrigerated vans; 12 not delivered"
+    }
+  ]
+}

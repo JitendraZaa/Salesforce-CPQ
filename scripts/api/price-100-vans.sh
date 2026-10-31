@@ -3,7 +3,8 @@
 # The ids differ in every org, so they are looked up by name here and filled into a temporary copy of
 # scripts/ep15-pricing-body.json. Expected net unit price: 44,640 (48,000 less the 7 percent volume tier).
 # Usage: sh scripts/api/price-100-vans.sh [org alias]   (default org when none is given)
-# The body keys come from the org's quote mapping; if the call is rejected, see the notes in episode 15's README.
+# The body's keys are the attribute names of the context definition's nodes (SalesTransaction and
+# SalesTransactionItem); SalesTransactionItemSource carries the line id the pricing procedure looks for.
 # @author Jitendra Zaa
 set -e
 cd "$(dirname "$0")/../.."
@@ -29,8 +30,14 @@ quote = body["jsonDataString"]["SalesTransaction"][0]
 quote["Pricebook"] = book
 line = quote["SalesTransactionItem"][0]
 line["Product"], line["PricebookEntry"], line["ProductSellingModel"] = van, entry, model
+# The API takes the data as a JSON string, not an object.
+body["jsonDataString"] = json.dumps(body["jsonDataString"])
 json.dump(body, open(out, "w"))
 PY
 
 # shellcheck disable=SC2086
-sf api request rest "/services/data/v68.0/connect/core-pricing/pricing" --method POST --body "$BODY" $ORG_FLAG
+sf api request rest "/services/data/v68.0/connect/core-pricing/pricing" --method POST --body @"$BODY" $ORG_FLAG | python3 -c "
+import json, sys
+result = json.load(sys.stdin)['pricingResult']
+for key in ('ListPrice', 'NetUnitPrice', 'NetTotalPrice'):
+    print(key, result[key][0]['value'])"

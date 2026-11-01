@@ -1,0 +1,13 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Contact", "referenceId": "BakeryOwnerRef" },
+      "AccountId": "__BAKERY_ACCOUNT_ID__",
+      "FirstName": "Dana",
+      "LastName": "Whitfield",
+      "Title": "Owner",
+      "Email": "dana.whitfield@crumbandco.example",
+      "Phone": "(555) 014-2291"
+    }
+  ]
+}

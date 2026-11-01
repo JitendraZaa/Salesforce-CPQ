@@ -1,0 +1,30 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Account", "referenceId": "BakeryRef" },
+      "Name": "Crumb & Co Bakery",
+      "Phone": "(555) 014-2290",
+      "Website": "www.crumbandco.example",
+      "Industry": "Food & Beverage",
+      "BillingStreet": "214 Baker Street",
+      "BillingCity": "Sacramento",
+      "BillingState": "CA",
+      "BillingPostalCode": "95814",
+      "BillingCountry": "United States",
+      "Has_Depot__c": false,
+      "Description": "Neighbourhood bakery in Sacramento. Brightside Motors' customer for three refrigerated Volt Vans.",
+      "Contacts": {
+        "records": [
+          {
+            "attributes": { "type": "Contact", "referenceId": "BakeryOwnerRef" },
+            "FirstName": "Dana",
+            "LastName": "Whitfield",
+            "Title": "Owner",
+            "Email": "dana.whitfield@crumbandco.example",
+            "Phone": "(555) 014-2291"
+          }
+        ]
+      }
+    }
+  ]
+}

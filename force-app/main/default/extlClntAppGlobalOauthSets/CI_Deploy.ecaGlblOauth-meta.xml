@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtlClntAppGlobalOauthSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+    <certificate>MIIC2jCCAcKgAwIBAgIUV8hlWQfOEHMnVxypymQV4f72PLYwDQYJKoZIhvcNAQELBQAwDTELMAkGA1UEAwwCY2kwHhcNMjYxMTAxMDQxNzA3WhcNMjgxMDMxMDQxNzA3WjANMQswCQYDVQQDDAJjaTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAM147kzi8H+/Pw2n91/RGgXgWeIOqoxpAAgP8Xv15GvcTRiXvDom00pOSB7QxXxT2+n604ZF3iuHyg9Hhc0W8rfXy7q9V/Cykj0NL/QjVd4mkQhKb+l0YRpC5G1xAfgGkIvZD5MOWKcYjAPoEGkbUQD+mJurBfAZ5SPLOjNcWup+dSfhyWXwxC0iEhh1VZFDlIs7RXlFo7vmdr4uu6hsWoIY3IYRs97LbGsdI03Mmp8w1d8cGYGvdyFFNAz6M7UqIK5rvhrLDMtUCiSR2Z4DJhTO0ujJJ4a0j/h/MbqGOXPPzGhA4UKTlsF7U03LMg3r2x1rcrqGZhOs8T6k4NPB+8kCAwEAAaMyMDAwHQYDVR0OBBYEFD5my5oNwYVK3oCMKEQMAfRrmMLeMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBADw4GJIZzrYogDaBwC7YW7J7jpiRrf71VSBPEDd7lnpZZINAEDTvffS3wyMLd7c5RcfJ4MbF7AXEesrHaMKzkQ/CLASNNByQ5UDxE9+nd2M52ycD0/uVOvbV4iAiMfYYNlf8zS+2ESMUWmS4vEzrvu4+eA8Ty4de8IHi1ugNapwP7rwZtCxxReNar1p+Sr/ZB2CJnpzWekETMAL+fOLDcyQ5ustxhEtubI/4clbJaFH2su97ANwY4usQGuWB9pZ5rNtg1FX54iFgyLLaj8sc6y8S5WoovkbOM7mjHwE90yACFbrgVzpoXAPy/0NbTLhtZCfY4wsjbCz6R3NHx7VjUW0=</certificate>
+    <externalClientApplication>CI_Deploy</externalClientApplication>
+    <isConsumerSecretOptional>false</isConsumerSecretOptional>
+    <isIntrospectAllTokens>false</isIntrospectAllTokens>
+    <isNamedUserJwtEnabled>true</isNamedUserJwtEnabled>
+    <isPkceRequired>false</isPkceRequired>
+    <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+    <label>CI Deploy</label>
+    <shouldRotateConsumerKey>false</shouldRotateConsumerKey>
+    <shouldRotateConsumerSecret>false</shouldRotateConsumerSecret>
+</ExtlClntAppGlobalOauthSettings>

@@ -9,18 +9,26 @@ anything else.
 
 ## 1. Make a key and a certificate
 
-Create them outside this repository:
+Create them in `certs-local/`, a folder git ignores:
 
 ```sh
+mkdir -p certs-local && cd certs-local
 openssl genrsa -out server.key 2048
-openssl req -new -x509 -key server.key -out server.crt -days 365 -subj "/CN=ci"
+openssl req -new -x509 -key server.key -out server.crt -days 730 -subj "/CN=ci"
 ```
+
+The certificate in `force-app/main/default/extlClntAppGlobalOauthSets/CI_Deploy.ecaGlblOauth-meta.xml` is the text of
+`server.crt` without its first and last lines; paste the new text there if you make a new pair.
 
 `server.key` is private. It is listed in `.gitignore`; never commit it.
 
 ## 2. Create an external client app in the test org
 
-In Setup, create an external client app configured for Salesforce DX. Upload `server.crt` as the certificate, turn on
+The project carries the app as metadata (`CI_Deploy`, in `externalClientApps/` and the `extlClntApp...` folders): the
+certificate, the JWT bearer flow, the scopes `api` and `refresh_token`, and the System Administrator profile as
+pre-approved. Deploy it with
+`sf project deploy start --metadata ExternalClientApplication:CI_Deploy --metadata ExtlClntAppGlobalOauthSettings:CI_Deploy --metadata ExtlClntAppOauthSettings:CI_Deploy --metadata ExtlClntAppOauthConfigurablePolicies:CI_Deploy --target-org <your alias>`.
+To make it by hand instead, create an external client app in Setup, upload `server.crt` as the certificate, turn on
 the JWT bearer flow, and give the app the scopes `api` and `refresh_token`. Note the consumer key. Make sure the user
 who will sign in is allowed to use the app and has the right to author Apex.
 

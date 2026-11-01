@@ -20,7 +20,7 @@ The Depot Charging product is made ready for usage billing: a unit of measure (k
 4. On the product choose **Configure Usage Properties**, Product Usage Resources, **Add**: the resource `Charging Energy`. The out-of-the-box aggregation and overage policies fill in. Choose the aggregation policy **Sum Monthly**, set effective dates, Save.
 5. Skip the usage grant: Depot Charging includes no free units.
 6. In Rate Management open the base rate card `Velora Charging Rate Card`, Rate Card Entries, **New**: usage resource, product Depot Charging, selling model, rate **0.21**, unit USD, status Active, date range.
-7. Create the **Price Book Rate Card**: standard price book plus Velora Charging Rate Card. Do this before the first Activate, or Activate fails with a message about the missing price book rate card.
+7. Create the **Price Book Rate Card**: standard price book plus Velora Charging Rate Card. Do this before you click Activate on the rate card: Activate needs the price book rate card to exist.
 8. On Configure Usage Properties click **Activate**. Run the product validator.
 9. Product Catalog Management, Index and Search Configuration, **Rebuild Index**; Salesforce Pricing Setup, **Sync Pricing Data**. Assign Depot Charging to a category.
 10. Make a new quote on a new opportunity for Swift Couriers with Depot Charging twice, named North Depot and Harbour Depot, so the lines stay separate. Create the order, then **Activate** it.
@@ -51,5 +51,5 @@ Where this page and an older note differ, the latest recorded values (31 Oct 202
 
 - Product Depot Charging, code US-KWH, usage, 0.21 per kWh, billing policy Velora Arrears (billed monthly in arrears). Charging starts after the chargers are installed on 28 Jan 2027 (story).
 - One charging asset per depot, so episode 36 can cancel the Harbour Depot alone.
-- The September restart changes dates for episode 28: the rate card effective date was moved to 9/1/2026 and a new entry RCE-00000010 (0.21, 9/1 to 9/30) was made and activated, because an active entry is locked ("Update the status field only"). Your own org needs the entry to start no later than the usage month.
-- The first Activate fails with "Invalid or missing price book rate card configuration" until the price book rate card exists.
+- The September restart changes dates for episode 28: the rate card effective date was moved to 9/1/2026 and a new entry RCE-00000010 (0.21, 9/1 to 9/30) was made and activated, because an active entry can only change its status. Your own org needs the entry to start no later than the usage month.
+- Create the price book rate card before you activate the rate card.

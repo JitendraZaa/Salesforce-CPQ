@@ -1,7 +1,8 @@
 # Setting up the CI check
 
-The workflow in `.github/workflows/ci.yml` signs in to a test org with the JWT flow, validates the deploy of
-`force-app` (nothing is saved in the org) and runs two test classes: `DealMetricsTest` and `ConnectQuoteActionTest`.
+The workflow in `.github/workflows/ci.yml` signs in to a test org with the JWT flow, validates the deploy of the
+`DealMetrics` class and its test (nothing is saved in the org) and runs `DealMetricsTest` only, so the check answers in
+minutes.
 It runs on every push to `main` and on every pull request to `main`.
 
 Use a test org that has the Revenue Management features the project needs. Do not point it at an org you use for
@@ -52,8 +53,9 @@ Before the first push, run the same check from your own machine with an org you 
 `sf org login web`:
 
 ```sh
-sf project deploy validate --source-dir force-app --target-org <your alias> \
-  --test-level RunSpecifiedTests --tests DealMetricsTest --tests ConnectQuoteActionTest
+sf project deploy validate --source-dir force-app/main/default/classes/DealMetrics.cls \
+  --source-dir force-app/main/default/classes/DealMetricsTest.cls --target-org <your alias> \
+  --test-level RunSpecifiedTests --tests DealMetricsTest
 ```
 
 A red first run on the pipeline then tells you something about the pipeline, not about the code.

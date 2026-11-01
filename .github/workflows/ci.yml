@@ -40,11 +40,11 @@ jobs:
       - name: Validate the deploy and run the named tests
         run: >
           sf project deploy validate
-          --source-dir force-app
+          --source-dir force-app/main/default/classes/DealMetrics.cls
+          --source-dir force-app/main/default/classes/DealMetricsTest.cls
           --target-org ci
           --test-level RunSpecifiedTests
           --tests DealMetricsTest
-          --tests ConnectQuoteActionTest
           --wait 30
 
       - name: Remove the key

@@ -1,0 +1,13 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Payment", "referenceId": "SwiftShortPaymentRef" },
+      "AccountId": "__SWIFT_ACCOUNT_ID__",
+      "Amount": 2899.50,
+      "Status": "Processed",
+      "Type": "Sale",
+      "ProcessingMode": "External",
+      "Comments": "Payment of the Connect invoice DOC-000000001, 0.50 short; the 0.50 is written off"
+    }
+  ]
+}

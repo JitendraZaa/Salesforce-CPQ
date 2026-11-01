@@ -1,0 +1,4 @@
+SELECT Id, Product2.ProductCode, LifecycleStartDate, CurrentLifecycleEndDate, CurrentQuantity
+FROM Asset
+WHERE Account.Name = 'Swift Couriers' AND Product2.ProductCode IN ('VC-SUB','VC-PLUS')
+ORDER BY LifecycleStartDate

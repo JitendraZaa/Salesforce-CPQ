@@ -38,3 +38,7 @@ All names and numbers are invented examples. Prices are in US dollars.
 - Request: 100 Volt Vans (VV-100), One Time, standard price book, procedure Velora_Pricing.
 - Result: list 48,000; 7 percent volume tier; net unit price 44,640; net total 4,464,000. No promotion applies to the base van.
 - Other tiers can be tried by changing `Quantity` in a copy of the body (25 gives 46,080).
+
+## Try it yourself
+
+Change `Quantity` to 25 in a copy of the body file and run the script again; expect a net unit price of 46,080. Then pass the procedure by its ID instead of its API name and compare the response.

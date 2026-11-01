@@ -13,19 +13,19 @@ To bring a fresh org to this starting point, run `sh scripts/reset-to.sh ep12-en
 ## Click path
 
 1. Open the schedule Standard Volume Based Adjustment (App Launcher, Price Adjustment Schedules). Velora Pricing reads its volume tiers from this schedule.
-2. Add the tiers for the Volt Van, one-time: lower bound 1 and upper bound 24 (list price); lower 25, upper 99, 4 percent; lower 100, no upper bound, 7 percent. Both bounds are inclusive in this org, so 24 to 25 and 99 to 100 must not overlap.
+2. Add the tiers for the Volt Van, one-time: lower bound 1 and upper bound 24 (list price); lower 25, upper 99, 4 percent; lower 100, no upper bound, 7 percent. Both bounds are inclusive in this org, so the tiers run 1-24, 25-99 and 100 and more, with no overlap.
 3. In Setup, Decision Tables, open Volume Discount Entries and click Refresh. Why: the procedure reads the table, not the tier records.
 4. Open Velora Pricing in the builder and check the Volume Discount element is after List Price and reads the Volume Discount Entries table. Make a small change, save, then Simulate with quantity 100 and Activate.
 5. In Salesforce Pricing Setup run Sync Pricing Data (Sync, then Confirm).
-6. Option prices: open the Volt Van, Attributes, View All, Configure, and tick Is Price Impacting on Battery and on Body. Why: the adjustment wizard refuses until this is set.
-7. On the schedule Standard Attribute Based Adjustment add an adjustment for each combination of both attributes. Use the type Override: Standard Panel with Long Range 90 kWh is 54,500, Refrigerated with Long Range is 58,700, both from the day you enter them. Refresh the Attribute Discount Entries decision table after each change, then Sync Pricing Data.
-8. On the opportunity Swift Couriers - Fleet create the quote. It starts with the opportunity's products. Delete the plain Volt Van line.
+6. Option prices: open the Volt Van, Attributes, View All, Configure, and tick Is Price Impacting on Battery and on Body. Why: the adjustment wizard only lists attributes marked as price impacting.
+7. On the schedule Standard Attribute Based Adjustment add an adjustment for each combination of both attributes (a condition lists every price-impacting attribute with Equals, so each price belongs to one combination). Use the adjustment type Override (Modify Price Details): Standard Panel with Long Range 90 kWh is 54,500, Refrigerated with Long Range is 58,700, both from the day you enter them. Refresh the Attribute Discount Entries decision table after each change, then Sync Pricing Data.
+8. On the opportunity Swift Couriers - Fleet create the quote (Swift Couriers Fleet V1, quote 00000036). It starts with the opportunity's products. Delete the plain Volt Van line.
 9. Add two Volt Van Fleet Package lines: 40 vans (Panel, Standard battery, with Wall Charger) and 60 vans (Refrigerated, Long Range, with Wall Charger). Add the depot chargers and installations.
 10. On a test quote set the van quantity to 24, 25, 99 and 100, click the net unit price each time and read the waterfall. Then price 100 vans with a copy of the schedule set to Slab and compare the totals (Range 4,464,000, Slab 4,652,640). Restore the Range schedule and delete the copy.
 
 ## Files in this repo used by this episode
 
-- `data/ep13/priceadjustment.plan.json`, `PriceAdjustmentSchedule.json`, `PriceAdjustmentTier.json`: an early version of the tiers, a schedule named Volt Van Fleet Tiers and three tiers. Note: these files write the upper bounds as 25 and 100 (exclusive). The org compares bounds inclusively, so for the current series use the values in the steps above (1 to 24, 25 to 99, 100 and more); the tier data in `data/seed/` (`31-PriceAdjustmentSchedule.json`, `32-PriceAdjustmentTier.json`) is the loaded set.
+- `data/ep13/priceadjustment.plan.json`, `PriceAdjustmentSchedule.json`, `PriceAdjustmentTier.json`: an early version of the tiers, a schedule named Volt Van Fleet Tiers and three tiers. For the current series use the tier values in the click path above (1 to 24, 25 to 99, 100 and more); the tier data in `data/seed/` (`31-PriceAdjustmentSchedule.json`, `32-PriceAdjustmentTier.json`) is the loaded set.
 - `scripts/load-ep13.sh`: loads the early schedule and tiers from `data/ep13`. It looks up the Volt Van and the One Time selling model by name, fills the placeholders into a temporary copy, so no org id is written to the repository, and does nothing if the schedule exists. Run `sh scripts/load-ep13.sh` (uses the default org, or set `TARGET_ORG=<alias>`). It then prints the two clicks it cannot do: refresh Volume Discount Entries and Sync Pricing Data.
 - `data/seed/34-AttributeBasedAdjRule.json`, `35-AttributeAdjustmentCondition.json`, `36-AttributeBasedAdjustment.json`: the attribute-based adjustments (the option prices). `sh scripts/seed-all.sh <alias>` loads them. Flag: `--dry-run` prints what would be created without creating it.
 - `scripts/seed-ep13.sh`: chains the earlier episodes' seed scripts and `load-ep13.sh`.
@@ -44,3 +44,7 @@ All names and numbers are invented examples. Prices are in US dollars.
 - Tiers apply per line quantity, not across the quote. V1: 40 Standard Panel vans at 46,080; 60 Refrigerated Long Range vans at 58,700 less 4 percent = 56,352 each.
 - Range for 100 base vans: 100 x 44,640 = 4,464,000. Slab: 24 x 48,000 + 75 x 46,080 + 1 x 44,640 = 4,652,640.
 - Test basis: 100 Refrigerated Long Range vans = 58,700 less 7 percent = 54,591 each.
+
+## Try it yourself
+
+Set the quantity of a Volt Van line to 99 and then to 100, click the net unit price each time, and compare the two waterfalls (46,080 against 44,640). Do not change the tiers of Standard Volume Based Adjustment itself.

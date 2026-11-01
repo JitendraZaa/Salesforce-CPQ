@@ -47,12 +47,19 @@ public with sharing class PstQuotePlacer implements QuotePlacer {
             'PricebookEntryId' => input.pricebookEntryId,
             'Quantity' => 1,
             'UnitPrice' => input.unitPrice,
-            'StartDate' => input.startDate,
-            'EndDate' => input.endDate,
-            'PeriodBoundary' => 'Anniversary'
+            'StartDate' => isoDate(input.startDate),
+            'EndDate' => isoDate(input.endDate),
+            'PeriodBoundary' => 'Anniversary',
+            'BillingFrequency' => 'Monthly'
         };
         records.add(new RevSalesTrxn.RecordWithReferenceRequest('refQuoteLine0', line));
         return new RevSalesTrxn.GraphRequest('createConnectQuote', records);
+    }
+
+    /** The API reads dates as text in the form 2027-03-01; a Date value would be sent with a time. */
+    @TestVisible
+    private static String isoDate(Date value) {
+        return value == null ? null : Datetime.newInstanceGmt(value, Time.newInstance(0, 0, 0, 0)).formatGmt('yyyy-MM-dd');
     }
 
     private static QuoteOutcome toOutcome(RevSalesTrxn.PlaceSalesTransactionResponse response, Id existingQuoteId) {

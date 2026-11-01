@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Episode 42: everything the Create Connect Quote button needs, in one deploy: the Quote Request object with its
+     fields and tab, the Apex classes and their test, the screen flow, the Opportunity quick action, the Opportunity page layout that shows it, and the permission set.
+     Deploy: sf project deploy start --manifest manifest/ep42-quote-action.xml --target-org demo_cpq
+             --test-level RunSpecifiedTests --tests ConnectQuoteActionTest --wait 30 -->
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ConnectQuoteAction</members>
+        <members>ConnectQuoteActionTest</members>
+        <members>PstQuotePlacer</members>
+        <members>QuoteInput</members>
+        <members>QuoteOutcome</members>
+        <members>QuotePlacer</members>
+        <members>QuoteRequestService</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Quote_Request__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Quote_Request__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Create_Connect_Quote</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Opportunity-Opportunity Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Velora_Quote_Action</members>
+        <name>PermissionSet</name>
+    </types>
+    <types>
+        <members>Opportunity.Create_Connect_Quote</members>
+        <name>QuickAction</name>
+    </types>
+    <version>68.0</version>
+</Package>

@@ -66,4 +66,8 @@
         <object>Quote_Request__c</object>
         <viewAllRecords>false</viewAllRecords>
     </objectPermissions>
+    <tabSettings>
+        <tab>Quote_Request__c</tab>
+        <visibility>Visible</visibility>
+    </tabSettings>
 </PermissionSet>

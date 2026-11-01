@@ -1,8 +1,8 @@
-// Runs the Create Connect Quote action once for Swift's opportunity, to see the real Place Sales Transaction call work
+// Runs the Create Connect Quote action once for Swift Couriers - Fleet (the opportunity that has a price book), to see the real Place Sales Transaction call work
 // before the flow is involved. Run: sf apex run --file scripts/anonymous/place-one-quote.apex
 // This creates a real quote in the org. Run it only when you mean to.
 // @author Jitendra Zaa
-Opportunity opp = [SELECT Id, Pricebook2Id FROM Opportunity WHERE Name = 'Swift Couriers - Connect' LIMIT 1];
+Opportunity opp = [SELECT Id, Pricebook2Id FROM Opportunity WHERE Name = 'Swift Couriers - Fleet' LIMIT 1];
 Product2 product = [SELECT Id FROM Product2 WHERE ProductCode = 'VC-SUB' LIMIT 1];
 PricebookEntry entry = [
     SELECT Id, UnitPrice

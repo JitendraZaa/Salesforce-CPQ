@@ -63,51 +63,56 @@ Browse Catalogs is empty and lines price at 0.
 
 ## Episodes
 
-| # | Episode | What it adds | Tag |
-|---|---|---|---|
-| 1 | What CPQ and lead to cash mean | No files. The road from enquiry to cash. | `ep01-end` |
-| 2 | Our workspace | The Salesforce DX project, `Account.Has_Depot__c` and the `Velora_Fields` permission set. | `ep02-end` |
-| 3 | The first product and its price | The Volt Van, its One Time price and Velora Catalog (`scripts/load-ep03.sh`). | `ep03-end` |
-| 4 | From enquiry to the first quote | The Swift Couriers lead (`data/ep04/Lead.json`), the pilot opportunity and quote. | `ep04-end` |
-| 5 | Catalogs and categories | Five more products (`data/ep05/Product2.json`, `scripts/load-ep05.sh`), the category tree (`scripts/load-ep05-catalog.sh`). | `ep05-end` |
-| 6 | Attributes and classifications | Attributes and a classification, built on screen. | `ep06-end` |
-| 7 | Subscriptions | Velora Connect options and 29 per month prices (`scripts/load-ep07.sh`). | `ep07-end` |
-| 8 | Bundles | The Volt Van Fleet Package, built on screen. | `ep08-end` |
-| 9 | Configuration rules | A rule that Refrigerated needs Long Range, built on screen. | `ep09-end` |
-| 10 | Qualification rules | Depot products only for accounts with Has Depot. | `ep10-end` |
-| 11 | The configurator flow | A cloned product configurator flow. | `ep11-end` |
-| 12 | Pricing procedures | The Velora Pricing procedure. | `ep12-end` |
-| 13 | Volume pricing | Volume tiers on the Volt Van (`data/ep13/`, `scripts/load-ep13.sh`). | `ep13-end` |
-| 14 | Promotions | A launch promotion on the Refrigerated body. | `ep14-end` |
-| 15 | Pricing from code | A Pricing API request (`scripts/ep15-pricing-body.json`, `scripts/ep15-price.sh`). | `ep15-end` |
-| 16 | Approvals | A discount approval flow. | `ep16-end` |
-| 17 | The quote document | A quote document template. | `ep17-end` |
-| 18 | Quote versions and the primary quote | Cloned quote versions. | `ep18-end` |
-| 19 | Ramp deals | Yearly ramp segments for the fleet deal. | `ep19-end` |
-| 20 | Contracts and clauses | Contract with clauses. | `ep20-end` |
-| 21 | Negotiated prices that last | A contract price for the Volt Van. | `ep21-end` |
-| 22 | Billing setup | Billing policies, treatments and a legal entity. | `ep22-end` |
-| 23 | Quote to order | An order placed from the accepted quote. | `ep23-end` |
-| 24 | Assets and activation | Assets from the order. | `ep24-end` |
-| 25 | Fulfillment orchestration | Build, deliver, install, activate. | `ep25-end` |
-| 26 | The first invoice, and tax | The first invoice and a tax policy. | `ep26-end` |
-| 27 | Usage setup | Usage resources and a rate card. | `ep27-end` |
-| 28 | Usage to invoice, and the monthly minimum | Usage billed on an invoice. | `ep28-end` |
-| 29 | Payments | A part payment applied to an invoice. | `ep29-end` |
-| 30 | Disputes and credits | A credit memo. | `ep30-end` |
-| 31 | Invoice is not payment | Reconciling invoiced, paid and open. | `ep31-end` |
-| 32 | Collections and write-offs | Dunning and a write-off. | `ep32-end` |
-| 33 | Booked, billed, collected, earned | Four revenue numbers side by side. | `ep33-end` |
-| 34 | Amendments and proration | More vans and an upgrade mid-term. | `ep34-end` |
-| 35 | Renewals | A renewal from the contract. | `ep35-end` |
-| 36 | Cancellations | Cancelling one depot's charging. | `ep36-end` |
-| 37 | The dealer site | An Experience Cloud site for dealers. | `ep37-end` |
-| 38 | A dealer's quote | A dealer quoting for a customer. | `ep38-end` |
-| 39 | The customer site | An Experience Cloud site for owners. | `ep39-end` |
-| 40 | Deploying a pricing change | `manifest/ep40-pricing.xml`, `manifest/ep40-deps.xml`, `scripts/seed-second-org.sh`, `scripts/api/price-100-vans.sh`. | `ep40-end` |
-| 41 | Testing every change | `DealMetrics`, `DealMetricsTest` and `.github/workflows/ci.yml` (see `docs/ci-setup.md`). | `ep41-end` |
-| 42 | An Apex action for quotes | `Quote_Request__c`, `QuotePlacer`, `PstQuotePlacer`, `QuoteRequestService`, `ConnectQuoteAction` with its test, the `Create_Connect_Quote` flow and quick action, `Velora_Quote_Action`. | `ep42-end` |
-| 43 | A renewal from code | `scripts/api/renew-swift.sh`, `scripts/reset-ep34.sh`. | `ep43-end` |
+Each episode has a folder `episodes/NN-name/` with a `README.md` (starting point, steps, commands, what you should see,
+a task to try) and a `GLOSSARY.md` where the episode adds new terms. Episode 1 has no files. Tags `epNN-end` mark the
+end of an episode's files; an episode starts from the previous episode's tag. Episodes 31 to 33 and 38 to 43 are planned
+and their guides list the steps as planned.
+
+| # | Episode and folder | What it builds |
+|---|---|---|
+| 1 | What CPQ and lead to cash mean | No files. The road from enquiry to cash that the rest of the series follows. |
+| 2 | Our workspace, [episodes/02-our-workspace](episodes/02-our-workspace) | The DX project, `Account.Has_Depot__c`, the `Velora_Fields` permission set and the settings the series needs. |
+| 3 | The first product, [episodes/03-first-product](episodes/03-first-product) | The Volt Van with its One Time price in Velora Catalog (`scripts/load-ep03.sh`). |
+| 4 | From enquiry to the first quote, [episodes/04-first-quote](episodes/04-first-quote) | The Swift Couriers lead, the pilot opportunity and the first quote with the van. |
+| 5 | Catalogs and categories, [episodes/05-catalogs](episodes/05-catalogs) | Five more products and the category tree (`scripts/load-ep05.sh`, `scripts/load-ep05-catalog.sh`). |
+| 6 | Attributes and classifications, [episodes/06-attributes](episodes/06-attributes) | Battery and Body attributes on a classification, built on screen. |
+| 7 | Subscriptions, [episodes/07-subscriptions](episodes/07-subscriptions) | Velora Connect with its monthly option at 29 per vehicle (`scripts/load-ep07.sh`). |
+| 8 | Bundles, [episodes/08-bundles](episodes/08-bundles) | The Volt Van Fleet Package with van, charger and Connect as components. |
+| 9 | Configuration rules, [episodes/09-configuration-rules](episodes/09-configuration-rules) | Rules that limit choices, such as Refrigerated needing Long Range. |
+| 10 | Qualification rules, [episodes/10-qualification-rules](episodes/10-qualification-rules) | Depot products offered only to accounts with Has Depot. |
+| 11 | The configurator flow, [episodes/11-configurator-flow](episodes/11-configurator-flow) | A cloned product configurator flow used on the quote. |
+| 12 | Pricing procedures, [episodes/12-pricing-procedures](episodes/12-pricing-procedures) | The Velora Pricing procedure, cloned, read element by element and made the default. |
+| 13 | Volume pricing, [episodes/13-volume-pricing](episodes/13-volume-pricing) | Volume tiers and option prices for the Volt Van, and Swift's first fleet quote V1 (`data/ep13/`, `scripts/load-ep13.sh`). |
+| 14 | Promotions, [episodes/14-promotions](episodes/14-promotions) | A concept episode: what a promotion is, coupons and stacking, shown with a launch offer as an illustration. |
+| 15 | Pricing from code, [episodes/15-pricing-api](episodes/15-pricing-api) | A Pricing API request from the terminal (`scripts/ep15-pricing-body.json`, `scripts/ep15-price.sh`). |
+| 16 | Approvals, [episodes/16-approvals](episodes/16-approvals) | A discount approval flow: a line discount over the limit sends the quote to the sales manager. |
+| 17 | The quote document, [episodes/17-quote-document](episodes/17-quote-document) | The Velora Fleet Quote template in Document Builder and the generated PDF. |
+| 18 | Quote versions and the primary quote, [episodes/18-quote-versions](episodes/18-quote-versions) | Quote V2 cloned from V1 with depot charging added; the primary quote. |
+| 19 | Ramp deals, [episodes/19-ramp-deals](episodes/19-ramp-deals) | Year 1 to Year 3 ramp groups on V2 and the 3 percent yearly uplift on Connect. |
+| 20 | Contracts and clauses, [episodes/20-contracts](episodes/20-contracts) | Clause sets with a token, Quote Special Terms and the contract created from V2. |
+| 21 | Negotiated prices that last, [episodes/21-negotiated-prices](episodes/21-negotiated-prices) | A contract price for the Volt Van and a later quote that sources it. |
+| 22 | Billing setup, [episodes/22-billing-setup](episodes/22-billing-setup) | Billing policy, billing treatment and the legal entity Velora Motors Inc. |
+| 23 | Quote to order, [episodes/23-quote-to-order](episodes/23-quote-to-order) | The accepted quote turned into a draft order with Create Single Order. |
+| 24 | Assets and activation, [episodes/24-assets](episodes/24-assets) | The activated order, its assets and billing schedules. |
+| 25 | Fulfillment orchestration, [episodes/25-fulfillment](episodes/25-fulfillment) | Dynamic Revenue Orchestrator: a plan with Build Vans and Deliver Vans. |
+| 26 | The first invoice, and tax, [episodes/26-first-invoice](episodes/26-first-invoice) | The first Connect invoice from billing schedules, and where tax fits. |
+| 27 | Usage setup, [episodes/27-usage-setup](episodes/27-usage-setup) | Unit of measure, usage resource, Depot Charging product and the 0.21 per kWh rate card. |
+| 28 | Usage to invoice, and the monthly minimum, [episodes/28-usage-to-invoice](episodes/28-usage-to-invoice) | A September depot charging order, the usage file import, the usage flow and the usage summaries. |
+| 29 | Payments, [episodes/29-payments](episodes/29-payments) | A payment of 2,552 applied to the fleet invoice, leaving a balance of 348. |
+| 30 | Disputes and credits, [episodes/30-credits](episodes/30-credits) | A credit memo of 348 created and applied from an invoice line. |
+| 31 | Invoice is not payment, [episodes/31-invoice-is-not-payment](episodes/31-invoice-is-not-payment) | Planned: reading invoiced, paid and open side by side. |
+| 32 | Collections and write-offs, [episodes/32-collections](episodes/32-collections) | Planned: dunning and a write-off. |
+| 33 | Booked, billed, collected, earned, [episodes/33-booked-billed-collected-earned](episodes/33-booked-billed-collected-earned) | Planned: four revenue numbers for the same deal. |
+| 34 | Amendments and proration, [episodes/34-amendments](episodes/34-amendments) | Fifty more Connect vehicles part-way through a month (Amend), and 20 vehicles moved to Connect Plus (Swap). Uses `scripts/ep34-connect-plus.sh`. |
+| 35 | Renewals, [episodes/35-renewals](episodes/35-renewals) | A renewal quote and order for the Year 3 Connect asset. |
+| 36 | Cancellations, [episodes/36-cancellations](episodes/36-cancellations) | Cancelling one depot's charging from a date, by quote and order. |
+| 37 | The dealer site, [episodes/37-dealer-site](episodes/37-dealer-site) | An Experience Cloud site for dealers and the dealer configurator permission set. |
+| 38 | A dealer's quote, [episodes/38-dealer-quote](episodes/38-dealer-quote) | Planned: a dealer quoting for a customer with the partner discount. |
+| 39 | The customer site, [episodes/39-customer-site](episodes/39-customer-site) | Planned: an Experience Cloud site where owners see their assets. |
+| 40 | Deploying a pricing change, [episodes/40-deploying-pricing](episodes/40-deploying-pricing) | Planned: validating and deploying the pricing procedure with `manifest/ep40-pricing.xml` and `manifest/ep40-deps.xml`. |
+| 41 | Testing every change, [episodes/41-testing](episodes/41-testing) | Planned: `DealMetrics` and `DealMetricsTest` run by `.github/workflows/ci.yml` (see `docs/ci-setup.md`). |
+| 42 | An Apex action for quotes, [episodes/42-apex-quote-action](episodes/42-apex-quote-action) | Planned: `Quote_Request__c`, `QuotePlacer`, `ConnectQuoteAction`, the `Create_Connect_Quote` flow and quick action. |
+| 43 | A renewal from code, [episodes/43-renewal-from-code](episodes/43-renewal-from-code) | Planned: `scripts/api/renew-swift.sh` renews Swift's contract through the API. |
 
 ## Project layout
 

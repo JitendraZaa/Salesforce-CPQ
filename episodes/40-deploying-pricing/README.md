@@ -1,6 +1,6 @@
 # Episode 40: Deploying a pricing change
 
-Status: planned, not recorded yet; steps below may change when the episode is recorded.
+Status: files ready, not recorded yet; steps below may change when the episode is recorded.
 
 ## What this episode builds
 
@@ -8,7 +8,7 @@ A change to the pricing procedure is retrieved from the working org, shown as a 
 
 ## Before you start
 
-Starting point: the source on `main` as episode 39 left it (tag `ep39-end`); the developer episodes continue the source, they do not check out older tags. `demo_cpq` already holds the pricing procedure, tiers and prices. You need a second org with Revenue Management, signed in once:
+Starting point: the source on `main` as episode 39 left it (tag `ep39-end`); the developer episodes continue the source, they do not check out older tags. `demo_cpq` already holds the pricing procedure, tiers and prices. You need a second org with Revenue Management, signed in once (a scratch org made from `config/revenue-cloud-scratch-def.json` with `sf org create scratch --definition-file config/revenue-cloud-scratch-def.json --alias velora_qa --target-dev-hub <your dev hub> --duration-days 7` is already signed in, and then this step is not needed):
 
 ```sh
 sf org login web --alias velora_qa --instance-url <its My Domain URL>
@@ -37,7 +37,13 @@ sf project retrieve start --manifest manifest/ep40-pricing.xml --target-org demo
 - `--manifest` names the package file that lists what to fetch (`manifest/ep40-pricing.xml` lists one `ExpressionSetDefinition`).
 - `--target-org` is the org to read from. Then `git diff` shows the new version.
 
-4. Deploy the base metadata the second org lacks (`Account.Has_Depot__c`, the `Velora_Fields` permission set) with a manifest `manifest/ep40-base.xml` (planned).
+4. Deploy the base metadata the second org lacks (`Account.Has_Depot__c`, the `Velora_Fields` permission set) with the manifest `manifest/ep40-base.xml`:
+
+```sh
+sf project deploy start --manifest manifest/ep40-base.xml --target-org velora_qa
+```
+
+   On a fresh org this deploys two components. On an org that already carries them the result reads unchanged.
 5. Validate without saving:
 
 ```sh
@@ -66,11 +72,11 @@ sh scripts/api/price-100-vans.sh velora_qa
 
 ## Files in this repo used by this episode
 
-- `manifest/ep40-pricing.xml`: the pricing procedure to retrieve and deploy. It currently names the member `Velora_Pricing_Procedure`; the expression set in `force-app/main/default/expressionSetDefinition/` is `Velora_Pricing`, so confirm the name with the query in step 2 before you run it.
+- `manifest/ep40-pricing.xml`: the pricing procedure to retrieve and deploy. It names the member `Velora_Pricing`, the expression set in `force-app/main/default/expressionSetDefinition/`; confirm the name with the query in step 2.
 - `manifest/ep40-deps.xml`: context definitions and decision tables, deployed first when the validation asks.
 - `scripts/seed-second-org.sh`: loads episodes 3 to 13 data into a second org.
 - `scripts/api/price-100-vans.sh`, `scripts/ep15-pricing-body.json`: the price check.
-- Planned and not in the repository yet: `manifest/ep40-base.xml`.
+- `manifest/ep40-base.xml`: the base metadata (`Account.Has_Depot__c` and the `Velora_Fields` permission set) deployed before the procedure.
 
 ## What you should see (planned)
 

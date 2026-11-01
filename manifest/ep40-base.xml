@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Episode 40: the base metadata a fresh second org lacks, deployed before the pricing procedure: the Has Depot field
+     on Account and the Velora Fields permission set (the same two components episode 2 deployed). -->
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Account.Has_Depot__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Velora_Fields</members>
+        <name>PermissionSet</name>
+    </types>
+    <version>68.0</version>
+</Package>

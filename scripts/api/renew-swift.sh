@@ -6,7 +6,7 @@
 # token appears here) and saves the answer to scripts/api/renew-swift.response.json (generated, not committed).
 # The calling user needs the InitiateRenewal API permission set (RevLifecycleManagementInitiateRenewalApi).
 # The dates are examples; in a demo org set them relative to today. Pass START and END to change them:
-#   START=2030-02-01T00:00:00 END=2031-01-31T23:59:59 sh scripts/api/renew-swift.sh [org alias]
+#   START=2029-02-01T00:00:00 END=2030-01-31T23:59:59 sh scripts/api/renew-swift.sh [org alias]
 # The valid values of outputRecordType are not listed on the API page; Quote is used.
 # Usage: sh scripts/api/renew-swift.sh [org alias]   (default org when none is given)
 # @author Jitendra Zaa
@@ -29,7 +29,7 @@ CONTRACT=$(need_id "SELECT Id FROM Contract WHERE Account.Name = 'Swift Couriers
 # shellcheck disable=SC2086
 sf data query --json $ORG_FLAG --query "SELECT Id, Product2.ProductCode FROM Asset WHERE Account.Name = 'Swift Couriers' AND Product2.ProductCode IN ($PRODUCT_CODES) AND Id IN (SELECT AssetId FROM AssetContractRelationship WHERE ContractId = '$CONTRACT') ORDER BY LifecycleStartDate" > "$BODY.assets"
 
-python3 - "$BODY" "$CONTRACT" "${START:-2030-02-01T00:00:00}" "${END:-2031-01-31T23:59:59}" <<'PY'
+python3 - "$BODY" "$CONTRACT" "${START:-2029-02-01T00:00:00}" "${END:-2030-01-31T23:59:59}" <<'PY'
 import json, sys
 out, contract, start, end = sys.argv[1:5]
 records = json.load(open(out + ".assets"))["result"]["records"]
@@ -56,5 +56,5 @@ if [ -s "$RESPONSE" ]; then
 fi
 
 # shellcheck disable=SC2086
-sf api request rest "/services/data/v68.0/connect/revenue-management/assets/actions/renew" --method POST --body "$BODY" $ORG_FLAG > "$RESPONSE"
+sf api request rest "/services/data/v68.0/connect/revenue-management/assets/actions/renew" --method POST --body "$(cat "$BODY")" $ORG_FLAG > "$RESPONSE"
 cat "$RESPONSE"

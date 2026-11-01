@@ -2,6 +2,6 @@
   "assetIds": ["<asset id 1>", "<asset id 2>"],
   "contractId": "<contract id>",
   "outputRecordType": "Quote",
-  "renewalStartDate": "2030-02-01T00:00:00",
-  "renewalEndDate": "2031-01-31T23:59:59"
+  "renewalStartDate": "2029-02-01T00:00:00",
+  "renewalEndDate": "2030-01-31T23:59:59"
 }

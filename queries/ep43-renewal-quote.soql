@@ -1,0 +1,3 @@
+SELECT Quote.QuoteNumber, Quote.Name, Product2.ProductCode, Quantity, NetUnitPrice, StartDate, EndDate, TotalPrice
+FROM QuoteLineItem
+WHERE QuoteId = '0Q0g70000021wlZCAQ'

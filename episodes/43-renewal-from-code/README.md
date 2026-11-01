@@ -1,59 +1,48 @@
 # Episode 43: A renewal from code
 
-Status: files ready, not recorded yet; steps below may change when the episode is recorded.
+All names, people, companies and numbers in this project are invented examples. Prices are in US dollars.
 
 ## What this episode builds
 
-One renew request sent from the terminal for Swift Couriers' Connect Plus asset (`02ig7000002BZxNAAW`, 20 seats on contract 00000104, made by the swap of episode 34). The response is saved and read, and the renewal quote it made is found in the org. The Connect assets are already renewed or are renewed by episode 35's quote, so this is the asset still waiting.
+One renew request sent from the terminal for Swift Couriers' Connect Plus asset (20 seats on contract 00000104, made by the swap of episode 34). You set the asset's renewal term, send the request with `scripts/api/renew-swift.sh`, read the response, find the renewal quote it made (Renewal Quote 00000043, 20 Connect Plus at 40.17, 1 Feb 2029 to 31 Jan 2030, total 9,640.80), and run the script again to see its guard stop a second request.
 
 ## Before you start
 
-Starting point: source on `main` as episode 42 left it (tag `ep42-end`). The org is not reset for this episode: it runs forward from where episode 36 left it, and the renewal quote of episode 35 (Renewal Quote 00000041, 200 Connect) already exists. The Connect Plus asset has no renewal. The calling user needs the InitiateRenewal API permission set (`RevLifecycleManagementInitiateRenewalApi`). `scripts/reset-ep34.sh` deletes renewal quotes after listing them and asking; do not run it for this episode.
+- Starting point: the source on `main` as episode 42 left it. The org is not reset for this episode: it runs forward from where episode 36 left it. The Connect renewals are episode 35's quote; this is the asset still waiting.
+- The calling user needs the InitiateRenewal API permission set (`RevLifecycleManagementInitiateRenewalApi`).
+- `scripts/reset-ep34.sh` deletes renewal quotes after listing them and asking; do not run it for this episode.
 
-## Planned steps
+## Click path
 
-1. List the assets (the query is in `queries/ep43-assets.soql`):
+1. In VS Code open `queries/ep43-assets.soql` and run `sf data query -o <org alias> --file queries/ep43-assets.soql`. Eight assets come back: seven Velora Connect (VC-SUB) and one Velora Connect Plus (VC-PLUS), the one you renew.
+2. The renewal needs to know how long the new term lasts, and the asset has no renewal term yet. Set it: `sf data update record -o <org alias> --sobject Asset --record-id <the Connect Plus asset Id> --values "RenewalTerm=12 RenewalTermUnit=Months"`. The terminal says it updated the record.
+3. Open `scripts/api/renew-swift.sh` and read it from the top. It picks contract 00000104 (which holds the asset since the swap) and looks up its Id by query, queries Swift's assets for the product, and builds the body with a short block of Python: `assetIds`, `contractId`, `outputRecordType` Quote (a quote, not an order), `renewalStartDate` and `renewalEndDate` (defaults 1 Feb 2029 and 31 Jan 2030, an example one-year term you can change).
+4. Read the guard: before sending, the script looks for a quote whose name contains Renewal that already holds a line for the product, and stops if a response file is already saved. Why: the same renewal is never started twice from this script.
+5. Read the call: `sf api request rest "/services/data/v68.0/connect/revenue-management/assets/actions/renew" --method POST --body ...` and the output saved to `scripts/api/renew-swift.response.json`. No token appears anywhere: the CLI uses the login of the org you already authorised.
+6. Run it: `sh scripts/api/renew-swift.sh <org alias>`. It prints Renewing and the asset Id, then the response: an empty errors list, `renewalRecordId` (the Id of the record made), a request id, a status URL that is null and `success` true.
+7. Open `queries/ep43-renewal-quote.soql`, put the `renewalRecordId` in its `QuoteId` filter, and run `sf data query --target-org <org alias> --file queries/ep43-renewal-quote.soql`. One line: Renewal Quote 00000043, Velora Connect Plus, quantity 20, net unit price 40.17, 1 Feb 2029 to 31 Jan 2030, total 9,640.80. The list price is 39 with the asset's 3 percent uplift kept, and 20 x 40.17 x 12 = 9,640.80. The quote is a record a person can still review: the code starts the renewal, it does not decide the price.
+8. Run the same command again, `sh scripts/api/renew-swift.sh <org alias>`. It prints that a renewal quote already exists, with its Id, and that it is not sending a second request (exit status 2).
 
-```sh
-sf data query --target-org demo_cpq --file queries/ep43-assets.soql
-```
+## Background on slides (not steps)
 
-- `--target-org` is the org alias; `--file` reads the query from a file.
-- Seven Connect assets and the Connect Plus asset come back. `Status` and `Quantity` are empty on these assets and `CurrentQuantity` reads 0, because the quantities live in the asset state periods: `SELECT AssetId, StartDate, EndDate, Quantity FROM AssetStatePeriod WHERE Asset.Account.Name = 'Swift Couriers'`.
-
-2. Open `scripts/api/renew-swift.sh` and read it: it takes the contract 00000104, picks the Connect Plus assets linked to that contract (`CONTRACT_NUMBER` and `PRODUCT_CODES` change this), builds a JSON body (`assetIds`, `contractId`, `outputRecordType` Quote, `renewalStartDate`, `renewalEndDate`), refuses to run if a renewal quote for those products already exists or a response is already saved, and calls the Asset Renewal resource. The renewal quote of an asset has no opportunity, so the guard looks at the quote lines, not at an opportunity. The sample body is `scripts/api/renew-swift.sample.json`.
-3. Send it:
-
-```sh
-sh scripts/api/renew-swift.sh demo_cpq
-```
-
-   Inside the script the call is:
-
-```sh
-sf api request rest "/services/data/v68.0/connect/revenue-management/assets/actions/renew" --method POST --body scripts/api/renew-swift.json --target-org demo_cpq
-```
-
-- `sf api request rest` sends a REST request with the CLI's sign-in, so no token appears in the file.
-- The path is the Asset Renewal resource of the Connect REST API.
-- `--method POST` sends data; `--body` names the request file; `--target-org` is the org alias.
-- Change the dates with `START=... END=... sh scripts/api/renew-swift.sh demo_cpq`. The defaults are 2030-02-01 to 2031-01-31; the Connect Plus asset runs to 2029-01-31, so if the org rejects the dates, use the day after the asset's end.
-
-4. Read the saved response (`scripts/api/renew-swift.response.json`, generated) and find the record id it returns.
-5. Query the quote and its lines: `SELECT Id, Name, Status, OpportunityId FROM Quote WHERE Id = '<id>'` and `SELECT Quantity, UnitPrice, Product2.ProductCode FROM QuoteLineItem WHERE QuoteId = '<id>'`. Expect 20 Connect Plus. Open the quote in the org; Created By is the user who sent the call. A renewal quote made this way has no opportunity.
-6. Run the script again: it prints that a renewal quote already exists (or that a response is saved) and exits with status 2 without sending a second request.
+- An asset is what a customer owns after an order is activated. Revenue Management has asset lifecycle APIs (amend, cancel, renew, upgrade, downgrade, swap) that offer the same actions as the buttons on the Managed Assets list; this episode uses renew.
+- A renew request is JSON with the asset Ids and the output record type; the start date is required when the renewal starts early or the asset has already expired; the end date and contract are optional. The caller needs the same permission as the button, so an interface is never a side door around the rules the screen enforces.
+- Read a response before building on it; the same habits work for the other calls in the list.
 
 ## Files in this repo used by this episode
 
-- `scripts/api/renew-swift.sh`, `scripts/api/renew-swift.sample.json`, `scripts/lib/common.sh`
-- `queries/ep43-assets.soql`
+- `queries/ep43-assets.soql`: Id, product code, lifecycle start date, end date and current quantity of Swift's VC-SUB and VC-PLUS assets.
+  - `sf data query`: run a read-only SOQL query; `-o` or `--target-org` is the org; `--file` reads the query from a file.
+- `queries/ep43-renewal-quote.soql`: the renewal quote's number, name, product, quantity, net unit price, dates and total price (change the `QuoteId` to yours).
+- `scripts/api/renew-swift.sh`: the script described above. Change the contract or products with `CONTRACT_NUMBER=... PRODUCT_CODES="'VC-SUB','VC-PLUS'"`, the dates with `START=... END=...`. Usage: `sh scripts/api/renew-swift.sh [org alias]`.
+- `scripts/api/renew-swift.sample.json`: a sample of the body the script builds.
+- `scripts/api/renew-swift.json` and `scripts/api/renew-swift.response.json`: generated by the script (the body and the saved response).
+- `scripts/lib/common.sh`: the shared helpers the script sources.
 
-## What you should see (planned)
+## What you should see
 
-A saved response, a renewal quote for the Connect Plus asset with 20 seats, and the second run stopping at the guard. The price (41.38) and the dates are confirmed only when the call is made.
+A saved response with `success` true and a `renewalRecordId`, Renewal Quote 00000043 with 20 Velora Connect Plus at 40.17 (9,640.80), and the second run stopping at the guard.
 
 ## Try it yourself
 
-Send the same request with the record type Order if the org accepts it, and compare the result with the quote. Both change the org, so do it only in a copy.
-
-All names and numbers are invented examples. Prices are in US dollars.
+Open the script, read the guard's query and say in your own words what it stops. Then run it against your org with your own contract and asset, and find the renewal quote it created.

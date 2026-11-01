@@ -100,19 +100,19 @@ and their guides list the steps as planned.
 | 28 | Usage to invoice, and the monthly minimum, [episodes/28-usage-to-invoice](episodes/28-usage-to-invoice) | A September depot charging order, the usage file import, the usage flow and the usage summaries. |
 | 29 | Payments, [episodes/29-payments](episodes/29-payments) | A payment of 2,552 applied to the fleet invoice, leaving a balance of 348. |
 | 30 | Disputes and credits, [episodes/30-credits](episodes/30-credits) | A credit memo of 348 created and applied from an invoice line. |
-| 31 | Invoice is not payment, [episodes/31-invoice-is-not-payment](episodes/31-invoice-is-not-payment) | Planned: reading invoiced, paid and open side by side. |
-| 32 | Collections and write-offs, [episodes/32-collections](episodes/32-collections) | Planned: dunning and a write-off. |
-| 33 | Booked, billed, collected, earned, [episodes/33-booked-billed-collected-earned](episodes/33-booked-billed-collected-earned) | Planned: four revenue numbers for the same deal. |
+| 31 | Invoice is not payment, [episodes/31-invoice-is-not-payment](episodes/31-invoice-is-not-payment) | Swift's two Connect invoices side by side in a list view and a query: 5,800 invoiced, 2,552 paid, 348 credited, 2,900 open. |
+| 32 | Collections and write-offs, [episodes/32-collections](episodes/32-collections) | A collection plan for the open invoice, the reason code BD, and a flow that writes off the last 0.50 after a payment of 2,899.50. |
+| 33 | Booked, billed, collected, earned, [episodes/33-booked-billed-collected-earned](episodes/33-booked-billed-collected-earned) | Booked 217,245.96, billed 2,552 and collected 2,552 read from the org with three queries; the earned figure is an example policy. |
 | 34 | Amendments and proration, [episodes/34-amendments](episodes/34-amendments) | Fifty more Connect vehicles part-way through a month (Amend), and 20 vehicles moved to Connect Plus (Swap). Uses `scripts/ep34-connect-plus.sh`. |
 | 35 | Renewals, [episodes/35-renewals](episodes/35-renewals) | A renewal quote and order for the Year 3 Connect asset. |
 | 36 | Cancellations, [episodes/36-cancellations](episodes/36-cancellations) | Cancelling one depot's charging from a date, by quote and order. |
 | 37 | The dealer site, [episodes/37-dealer-site](episodes/37-dealer-site) | An Experience Cloud site for dealers and the dealer configurator permission set. |
-| 38 | A dealer's quote, [episodes/38-dealer-quote](episodes/38-dealer-quote) | Planned: a dealer quoting for a customer with the partner discount. |
-| 39 | The customer site, [episodes/39-customer-site](episodes/39-customer-site) | Planned: an Experience Cloud site where owners see their assets. |
-| 40 | Deploying a pricing change, [episodes/40-deploying-pricing](episodes/40-deploying-pricing) | Planned: validating and deploying the pricing procedure with `manifest/ep40-pricing.xml` and `manifest/ep40-deps.xml`. |
-| 41 | Testing every change, [episodes/41-testing](episodes/41-testing) | Planned: `DealMetrics` and `DealMetricsTest` run by `.github/workflows/ci.yml` (see `docs/ci-setup.md`). |
-| 42 | An Apex action for quotes, [episodes/42-apex-quote-action](episodes/42-apex-quote-action) | Planned: `Quote_Request__c`, `QuotePlacer`, `ConnectQuoteAction`, the `Create_Connect_Quote` flow and quick action. |
-| 43 | A renewal from code, [episodes/43-renewal-from-code](episodes/43-renewal-from-code) | Planned: `scripts/api/renew-swift.sh` renews Swift's contract through the API. |
+| 38 | A dealer's quote, [episodes/38-dealer-quote](episodes/38-dealer-quote) | A dealer signs in to the Velora Dealers site, creates a quote for Crumb & Co Bakery, and Velora's desk adds 3 Volt Vans (144,000); catalog sharing rules and the dealer permission set. |
+| 39 | The customer site, [episodes/39-customer-site](episodes/39-customer-site) | The Velora Customers site: Lena Fischer's customer user, a sharing set, her Connect order and invoice DOC-000000003 (29) posted from VS Code, read on the site. |
+| 40 | Deploying a pricing change, [episodes/40-deploying-pricing](episodes/40-deploying-pricing) | A new Velora Pricing version retrieved with `manifest/ep40-pricing.xml`, dry-run and deployed to a second org with `scripts/deploy-pricing.sh`, checked by pricing 100 vans (net 44,640). |
+| 41 | Testing every change, [episodes/41-testing](episodes/41-testing) | `DealMetrics` and its six tests run in the test org and by `.github/workflows/ci.yml` on a push (see `docs/ci-setup.md`). |
+| 42 | An Apex action for quotes, [episodes/42-apex-quote-action](episodes/42-apex-quote-action) | `Quote_Request__c`, `QuotePlacer`, `ConnectQuoteAction`, the `Create_Connect_Quote` flow and quick action: one quote and one line, safe to click twice. |
+| 43 | A renewal from code, [episodes/43-renewal-from-code](episodes/43-renewal-from-code) | `scripts/api/renew-swift.sh` renews Swift's Connect Plus asset through the API and stops a second request. |
 
 ## Project layout
 

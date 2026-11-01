@@ -1,45 +1,49 @@
 # Episode 33: Booked, billed, collected, earned
 
-Status: planned, not recorded yet; steps below may change when the episode is recorded.
+All names, people, companies and numbers in this project are invented examples. Prices are in US dollars.
 
 ## What this episode builds
 
-One Connect-only table for the story date, 15 April 2027, with four numbers that answer four questions: booked (what the contract is worth), billed (what was invoiced), collected (what was paid) and recognised (what was earned under an example policy). The hands-on part reads each number from the org; the general ledger part is an illustration.
+Four numbers for the Swift Couriers Connect subscription, side by side: booked 217,245.96 (what the contract is worth), billed 2,552 (the invoice less its credit), collected 2,552 (the payment) and earned 2,552 (an example policy, shown on slides). You read booked, billed and collected in the Billing app and with three queries from VS Code.
 
 ## Before you start
 
-Starting point: tag `ep31-end` (or `ep32-end` if episode 32 was recorded). Swift's February invoices are reconciled and the Connect deal is the three-year ramp of 100, 200 and 300 vehicles.
+- Starting point: the end of episode 32. The fleet order 00000126 holds the Connect lines (VC-SUB). Invoice DOC-000000002 is 2,900 with credit 348 and payment 2,552 applied. Credit memo DOC-0000000001 (348) and payment P-000000001 (2,552) exist.
+- To bring a fresh org as far as it can go by loading data, run `sh scripts/reset-to.sh ep28-end <org alias>` and follow episodes 29 to 32 by hand. A git tag restores files only, never the org. (This repository has no `ep32-end` tag yet.)
+- You need the Billing licence.
 
-`scripts/reset-to.sh` covers checkpoints up to episode 28 today; a checkpoint for this episode is planned and not in the repository yet.
+## Click path
 
-## Planned steps
+1. Billing app, Invoices, open DOC-000000002. In Invoice Amount Information Total Amount is 2,900. In Invoice Settlement Information: Net Credits Applied 348, Net Payments Applied 2,552, Balance 0, Settlement Status Settled.
+2. Navigation menu, Credit Memos: one credit memo, 348, Posted, with the invoice as its reference. Why: billed is the invoice less this credit.
+3. App Launcher, Payments, open P-000000001: 2,552, Processed, account Swift Couriers, balance 0 (all of it applied). This is the collected number.
+4. App Launcher, General Ledger Accounts (All view) and Accounting Periods: both lists show 0 items. Why: Billing builds journal entries from accounts, a period and rules; these records are not set up here, so the journal entry on the slide is an illustration of what they would produce.
+5. In VS Code open `queries/ep33-booked.soql` and run `sf data query -o <org alias> --file queries/ep33-booked.soql`. The answer is 217,245.96, the booked number.
+6. Open `queries/ep33-billed.soql` and run the same command with that file. The row reads DOC-000000002, 2,900, 348, 2,552, 0: billed is 2,900 less 348, 2,552.
+7. Open `queries/ep33-collected.soql` and run the command again. The row reads P-000000001, 2,552, 2,552, Processed: collected.
+8. Put the four numbers in a table: booked 217,245.96 (three years), billed 2,552, collected 2,552, earned 2,552 (February).
 
-1. Booked: take the total contract value of the Connect ramp from episode 19's quote lines (annual charges 34,800 + 71,688 + 110,757.96 = 217,245.96 when the Year 3 price is kept at full precision).
-2. Billed: open the February Connect invoice. Total Amount 2,900 less Net Credits Applied 348 gives 2,552.
-3. Collected: open the payment for Swift. Net Applied is 2,552.
-4. Recognised: under Velora's example policy, a Connect plan is earned per delivered vehicle per month, so 88 vehicles on the road in February at 29 gives 2,552. This is labelled an example policy, not Salesforce output.
-5. Read the invoice and payment numbers:
+## Background on slides (not steps)
 
-```sh
-sf data query --target-org demo_cpq --query "SELECT InvoiceNumber, TotalAmount, NetCreditsApplied, NetPaymentsApplied FROM Invoice"
-sf data query --target-org demo_cpq --query "SELECT Amount, NetApplied FROM Payment"
-```
-
-- `--target-org demo_cpq` is the org alias.
-- `--query` is the SOQL; the first reads invoice totals, credits and payments applied, the second reads each payment and how much of it is applied.
-
-6. General ledger: open General Ledger Accounts and Accounting Periods in the Billing app to see where debits and credits are kept. A balanced journal entry is shown as an illustration.
+- Bookings are accepted contractual commitments valued under a stated policy; billings are amounts invoiced in a period after credits; cash collections are money received; revenue is what is earned under accounting rules.
+- The earned number is an example policy, not Salesforce output: Connect is earned per vehicle on the road per month, so 88 vehicles x 29 = 2,552 for February.
+- Deferred revenue, unbilled revenue and backlog explain why the numbers differ in time.
+- General ledger, chart of accounts, journal entries (debits equal credits; cash up 2,552, receivables down 2,552) and accounting periods are explained as an illustration. Debit and credit memos are documents, not debits and credits.
 
 ## Files in this repo used by this episode
 
-- No files in the repository are specific to this episode yet. Planned: `scripts/ep33-four-numbers.soql`.
+- `queries/ep33-booked.soql`: SUM of TotalPrice from OrderItem for order 00000126 and product code VC-SUB (change the order number to yours).
+- `queries/ep33-billed.soql`: document number, total, credits applied, payments applied and balance of invoice DOC-000000002.
+- `queries/ep33-collected.soql`: payment number, amount, net applied and status of Swift Couriers' payment.
+- Command for each: `sf data query -o <org alias> --file <query file>`
+  - `sf data query`: run a read-only SOQL query.
+  - `-o`: the org alias.
+  - `--file`: read the query from a file.
 
-## What you should see (planned)
+## What you should see
 
-Booked 217,245.96; billed for February 2,552; collected 2,552; recognised 2,552 under the example policy.
+Booked 217,245.96. Billed row: DOC-000000002, 2,900, 348, 2,552, 0. Collected row: P-000000001, 2,552, 2,552, Processed. General ledger accounts and accounting periods: 0 items.
 
 ## Try it yourself
 
-Add March's Connect invoice (issued 1 March for the month ahead) to the table and say whether it changes billings, deferred revenue or both on 15 March.
-
-All names and numbers are invented examples. Prices are in US dollars.
+Pick one deal in your org, find its booked, billed and collected amounts, apply your own accounting policy to get the earned amount, and write one sentence on why each differs.

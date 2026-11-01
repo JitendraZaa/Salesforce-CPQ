@@ -30,10 +30,10 @@ A dealer, Sam Okafor of Brightside Motors, signs in to the Velora Dealers site a
 
 ## Background on slides (not steps)
 
-- A quote line is one product row on a quote. A partner (channel) discount is the dealer's discount on it; Revenue Management stores it on the quote line as a partner discount percent with a partner unit price. The Partner Community licence supports applying partner discounts on a site; the Customer Community Plus licence does not.
+- A quote line is one product row on a quote. A partner (channel) discount is the dealer's discount on it; Revenue Management stores it on the quote line as a partner discount percent with a partner unit price. The Partner Community licence supports applying partner discounts on a site.
 - The limit is Velora's rule in this example: 8 percent standard, 10 percent at most, which a validation rule can hold.
 - Example arithmetic: the van lists at 48,000; 8 percent takes 3,840 off, so the partner unit price is 44,160 and 3 vans total 132,480.
-- Limits: a partner does not manage the contract lifecycle from this site, and the ramp deals and qualification rules of earlier episodes are outside what this episode uses.
+- The ramp deals and qualification rules of earlier episodes are not used here.
 
 ## Files in this repo used by this episode
 

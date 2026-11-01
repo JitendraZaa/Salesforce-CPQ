@@ -15,19 +15,19 @@ Four numbers for the Swift Couriers Connect subscription, side by side: booked 2
 ## Click path
 
 1. Billing app, Invoices, open DOC-000000002. In Invoice Amount Information Total Amount is 2,900. In Invoice Settlement Information: Net Credits Applied 348, Net Payments Applied 2,552, Balance 0, Settlement Status Settled.
-2. Navigation menu, Credit Memos: one credit memo, 348, Posted, with the invoice as its reference. Why: billed is the invoice less this credit.
+2. Navigation menu, Credit Memos, open DOC-0000000001: 348, Posted, with invoice DOC-000000002 as its reference. Why: billed is the invoice less this credit.
 3. App Launcher, Payments, open P-000000001: 2,552, Processed, account Swift Couriers, balance 0 (all of it applied). This is the collected number.
-4. App Launcher, General Ledger Accounts (All view) and Accounting Periods: both lists show 0 items. Why: Billing builds journal entries from accounts, a period and rules; these records are not set up here, so the journal entry on the slide is an illustration of what they would produce.
+4. App Launcher, General Ledger Accounts (All view) and Accounting Periods: both lists show 0 items. Why: Billing builds journal entries from accounts, a period and rules; the journal entry on the slide is an illustration of what they would produce.
 5. In VS Code open `queries/ep33-booked.soql` and run `sf data query -o <org alias> --file queries/ep33-booked.soql`. The answer is 217,245.96, the booked number.
 6. Open `queries/ep33-billed.soql` and run the same command with that file. The row reads DOC-000000002, 2,900, 348, 2,552, 0: billed is 2,900 less 348, 2,552.
 7. Open `queries/ep33-collected.soql` and run the command again. The row reads P-000000001, 2,552, 2,552, Processed: collected.
-8. Put the four numbers in a table: booked 217,245.96 (three years), billed 2,552, collected 2,552, earned 2,552 (February).
 
 ## Background on slides (not steps)
 
 - Bookings are accepted contractual commitments valued under a stated policy; billings are amounts invoiced in a period after credits; cash collections are money received; revenue is what is earned under accounting rules.
 - The earned number is an example policy, not Salesforce output: Connect is earned per vehicle on the road per month, so 88 vehicles x 29 = 2,552 for February.
 - Deferred revenue, unbilled revenue and backlog explain why the numbers differ in time.
+- The table of four numbers (booked 217,245.96 for three years; billed, collected and earned 2,552 for February) is shown on a slide.
 - General ledger, chart of accounts, journal entries (debits equal credits; cash up 2,552, receivables down 2,552) and accounting periods are explained as an illustration. Debit and credit memos are documents, not debits and credits.
 
 ## Files in this repo used by this episode

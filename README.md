@@ -65,8 +65,8 @@ Browse Catalogs is empty and lines price at 0.
 
 Each episode has a folder `episodes/NN-name/` with a `README.md` (starting point, steps, commands, what you should see,
 a task to try) and a `GLOSSARY.md` where the episode adds new terms. Episode 1 has no files. Tags `epNN-end` mark the
-end of an episode's files; an episode starts from the previous episode's tag. Episodes 31 to 33 and 38 to 43 are planned
-and their guides list the steps as planned.
+end of an episode's files; an episode starts from the previous episode's tag. Episodes 31 to 33 and 38 to 43 have no end-of-episode tag yet
+and their guides say so.
 
 | # | Episode and folder | What it builds |
 |---|---|---|

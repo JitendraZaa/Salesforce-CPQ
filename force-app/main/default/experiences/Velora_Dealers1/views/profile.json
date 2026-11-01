@@ -1,0 +1,144 @@
+{
+  "appPageId" : "2afba8eb-5d8f-4d95-9f2a-4219bea93095",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "78a17cb1-b72d-4d62-8a27-ecf523fbd0ca",
+  "label" : "Profile",
+  "regions" : [ {
+    "id" : "e8f51f2b-51ea-4920-b260-1e3292a3f83d",
+    "regionName" : "header",
+    "type" : "region"
+  }, {
+    "components" : [ {
+      "componentAttributes" : {
+        "id" : "{!recordId}",
+        "showFullPhotoAsCircle" : true,
+        "showReputation" : false
+      },
+      "componentName" : "forceCommunity:userProfileHeader",
+      "id" : "103ca2ee-0f13-4b44-833f-9e1bcc459ff9",
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "tabsetConfig" : {
+          "UUID" : "568fd0e5-72be-40b2-9749-27d6f9e94e0f",
+          "activeTab" : "tab1",
+          "tabs" : [ {
+            "UUID" : "8cc2daf0-f953-4119-a2e9-bfe2dc946ba1",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : { },
+              "fqn" : "forceCommunity:userProfileDetail"
+            } ],
+            "tabKey" : "tab1",
+            "tabName" : "Details"
+          }, {
+            "UUID" : "61800375-eb51-4f5a-847f-32eda7a690ba",
+            "allowGuestUser" : false,
+            "locked" : false,
+            "seedComponents" : [ {
+              "attributes" : { },
+              "fqn" : "forceCommunity:userRelatedList"
+            } ],
+            "tabKey" : "tab2",
+            "tabName" : "Related"
+          } ],
+          "useOverflowMenu" : false
+        }
+      },
+      "componentName" : "forceCommunity:tabLayout",
+      "id" : "568fd0e5-72be-40b2-9749-27d6f9e94e0f",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : {
+            "id" : "{!recordId}"
+          },
+          "componentName" : "forceCommunity:userProfileDetail",
+          "id" : "593d24d9-7a21-4f5b-b885-17181cd4220c",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "8cc2daf0-f953-4119-a2e9-bfe2dc946ba1",
+        "regionLabel" : "Details",
+        "regionName" : "tab1",
+        "renditionMap" : { },
+        "type" : "region"
+      }, {
+        "components" : [ {
+          "componentAttributes" : {
+            "userId" : "{!recordId}"
+          },
+          "componentName" : "forceCommunity:userRelatedList",
+          "id" : "c8f02532-87a3-4cbf-8515-98f4e3064186",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "61800375-eb51-4f5a-847f-32eda7a690ba",
+        "regionLabel" : "Related",
+        "regionName" : "tab2",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    }, {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "e650a1df-4580-4831-9055-1f0fed3deb24",
+          "columns" : [ {
+            "UUID" : "f17ac9eb-3361-4caf-adab-67a3d035dfb5",
+            "columnKey" : "col1",
+            "columnName" : "Connect Account Column",
+            "columnWidth" : "12",
+            "seedComponents" : [ {
+              "attributes" : {
+                "sfdc:identifier" : "runtime_sales_prm_connectAccountContainer"
+              },
+              "fqn" : "runtime_sales_prm:connectAccountContainer"
+            } ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "e650a1df-4580-4831-9055-1f0fed3deb24",
+      "regions" : [ {
+        "components" : [ {
+          "componentAttributes" : { },
+          "componentName" : "runtime_sales_prm:connectAccountContainer",
+          "id" : "c3a0d629-ad4d-4c9e-9048-3e0b8cb53c3e",
+          "renderPriority" : "NEUTRAL",
+          "renditionMap" : { },
+          "type" : "component"
+        } ],
+        "id" : "f17ac9eb-3361-4caf-adab-67a3d035dfb5",
+        "regionLabel" : "Connect Account Column",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "800b73e7-4785-4571-9258-d24df5616da6",
+    "regionName" : "content",
+    "type" : "region"
+  }, {
+    "id" : "94463e58-db94-4e0a-92ed-982719b4f9b6",
+    "regionName" : "footer",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "detail-005"
+}

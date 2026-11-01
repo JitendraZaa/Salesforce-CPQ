@@ -1,0 +1,11 @@
+{
+  "activeViewId" : "3de4d5b9-254e-41eb-ae98-6f72645f7d59",
+  "appPageId" : "2afba8eb-5d8f-4d95-9f2a-4219bea93095",
+  "configurationTags" : [ ],
+  "devName" : "View_DealRegistration_Flow",
+  "id" : "bf8d623d-e40f-4319-ac5e-49d135984add",
+  "label" : "Deal Registration",
+  "routeType" : "deal-registration-flow",
+  "type" : "route",
+  "urlPrefix" : "deal-registration-flow"
+}

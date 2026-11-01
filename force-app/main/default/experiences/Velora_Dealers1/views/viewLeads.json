@@ -1,0 +1,51 @@
+{
+  "appPageId" : "2afba8eb-5d8f-4d95-9f2a-4219bea93095",
+  "componentName" : "siteforce:dynamicLayout",
+  "dataProviders" : [ ],
+  "id" : "2ac5c6a4-9222-4a3d-8ac2-8fc7febfc5d6",
+  "label" : "View Leads",
+  "regions" : [ {
+    "components" : [ {
+      "componentAttributes" : {
+        "background" : "background: rgba(0,0,0,0)",
+        "backgroundOverlay" : "rgba(0,0,0,0.5)",
+        "contentAreaWidth" : 100,
+        "sectionConfig" : {
+          "UUID" : "c7b1c928-f8bd-4aa2-805e-d703e5b107e1",
+          "columns" : [ {
+            "UUID" : "8600c72a-90a7-4b52-a79e-4bffe15bd624",
+            "columnKey" : "col1",
+            "columnName" : "Lead List Column",
+            "columnWidth" : "12",
+            "seedComponents" : [ {
+              "attributes" : {
+                "objectApiName" : "Lead",
+                "sfdc:identifier" : "forceCommunity_pipelineinspection_lead"
+              },
+              "fqn" : "runtime_pipeline_inspector:pipelineInspectorHomeExperienceContainer"
+            } ]
+          } ]
+        },
+        "sectionHeight" : 32
+      },
+      "componentName" : "forceCommunity:section",
+      "id" : "c7b1c928-f8bd-4aa2-805e-d703e5b107e1",
+      "regions" : [ {
+        "id" : "8600c72a-90a7-4b52-a79e-4bffe15bd624",
+        "regionLabel" : "Lead List Column",
+        "regionName" : "col1",
+        "renditionMap" : { },
+        "type" : "region"
+      } ],
+      "renderPriority" : "NEUTRAL",
+      "renditionMap" : { },
+      "type" : "component"
+    } ],
+    "id" : "b9bea330-f4b5-4200-b58d-04e5641b5201",
+    "regionName" : "content",
+    "type" : "region"
+  } ],
+  "themeLayoutType" : "Inner",
+  "type" : "view",
+  "viewType" : "lead-list"
+}

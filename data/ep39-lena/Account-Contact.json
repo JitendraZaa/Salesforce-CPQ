@@ -1,0 +1,26 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Account", "referenceId": "LenaAccountRef" },
+      "Name": "Lena Fischer",
+      "Has_Depot__c": false,
+      "BillingStreet": "42 Maple Court",
+      "BillingCity": "Sacramento",
+      "BillingState": "CA",
+      "BillingPostalCode": "95816",
+      "BillingCountry": "United States",
+      "Description": "Private owner of an Aria. A business account holds her because the org has no person accounts.",
+      "Contacts": {
+        "records": [
+          {
+            "attributes": { "type": "Contact", "referenceId": "LenaContactRef" },
+            "FirstName": "Lena",
+            "LastName": "Fischer",
+            "Title": "Aria owner",
+            "Email": "__LENA_EMAIL__"
+          }
+        ]
+      }
+    }
+  ]
+}

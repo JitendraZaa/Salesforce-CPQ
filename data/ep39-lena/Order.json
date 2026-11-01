@@ -1,0 +1,34 @@
+{
+  "records": [
+    {
+      "attributes": { "type": "Order", "referenceId": "LenaAriaOrderRef" },
+      "AccountId": "__LENA_ACCOUNT_ID__",
+      "BillToContactId": "__LENA_CONTACT_ID__",
+      "Pricebook2Id": "__PRICEBOOK_ID__",
+      "LegalEntityId": "__LEGAL_ENTITY_ID__",
+      "Name": "Lena Fischer - Aria",
+      "EffectiveDate": "__TODAY__",
+      "Status": "Draft",
+      "BillingStreet": "42 Maple Court",
+      "BillingCity": "Sacramento",
+      "BillingState": "CA",
+      "BillingPostalCode": "95816",
+      "BillingCountry": "United States",
+      "ShippingStreet": "42 Maple Court",
+      "ShippingCity": "Sacramento",
+      "ShippingState": "CA",
+      "ShippingPostalCode": "95816",
+      "ShippingCountry": "United States",
+      "OrderItems": {
+        "records": [
+          {
+            "attributes": { "type": "OrderItem", "referenceId": "LenaAriaItemRef" },
+            "PricebookEntryId": "__ARIA_PBE_ID__",
+            "Quantity": 1,
+            "UnitPrice": 39000
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "inputs": [
+    {
+      "paymentId": "0aQg70000008YSjEAM",
+      "appliedToId": "5TVg7000000BEUHGA4",
+      "amount": 2899.50,
+      "comments": "Swift pays 2,899.50 of the 2,900.00 Connect invoice; 0.50 is left"
+    }
+  ]
+}

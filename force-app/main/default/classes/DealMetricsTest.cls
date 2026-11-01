@@ -30,14 +30,32 @@ private class DealMetricsTest {
     }
 
     @IsTest
-    static void rampCohort_100Connect36Months() {
+    static void rampYear1_100Connect12Months() {
         List<DealMetrics.Line> lines = new List<DealMetrics.Line>{
-            new DealMetrics.Line('VC-SUB', true, 29, 100, 36)
+            new DealMetrics.Line('VC-SUB', true, 29, 100, 12)
         };
         DealMetrics.Result result = DealMetrics.calculate(lines);
         Assert.areEqual(2900.00, result.mrr);
         Assert.areEqual(34800.00, result.arr);
-        Assert.areEqual(104400.00, result.tcv);
+        Assert.areEqual(34800.00, result.tcv);
+    }
+
+    @IsTest
+    static void mapper_readsPilotLines() {
+        // The lines are built from JSON so the read-only subscription fields can be set without an org record.
+        String body =
+            '[{"attributes":{"type":"QuoteLineItem"},"Quantity":1,"UnitPrice":48000,"SellingModelType":"OneTime",' +
+            '"PricingTermCount":0,"Product2":{"attributes":{"type":"Product2"},"ProductCode":"VV-100"}},' +
+            '{"attributes":{"type":"QuoteLineItem"},"Quantity":1,"UnitPrice":29,"SellingModelType":"TermDefined",' +
+            '"PricingTermCount":12,"PricingTermUnit":"Months",' +
+            '"Product2":{"attributes":{"type":"Product2"},"ProductCode":"VC-SUB"}}]';
+        List<QuoteLineItem> rows = (List<QuoteLineItem>) JSON.deserialize(body, List<QuoteLineItem>.class);
+
+        DealMetrics.Result result = DealMetrics.fromQuoteLines(rows);
+
+        Assert.areEqual(29.00, result.mrr, 'The Connect line is the only recurring charge');
+        Assert.areEqual(348.00, result.arr);
+        Assert.areEqual(48348.00, result.tcv, 'The term is the 12 priced months, not the 1 month billing period');
     }
 
     @IsTest

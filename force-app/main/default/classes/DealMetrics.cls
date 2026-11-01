@@ -65,31 +65,48 @@ public with sharing class DealMetrics {
     }
 
     /**
-     * Reads a quote's lines and applies the rule. The field names on a subscription line are read dynamically, so the
-     * class still compiles in an org where they differ; check this mapper by hand in the org, because a test cannot
-     * create subscription lines.
+     * Reads a quote's lines and applies the rule. The query is dynamic, so the class still compiles in an org where
+     * the subscription fields differ; check this by hand in the org, because a test cannot create subscription lines.
      */
     public static Result forQuote(Id quoteId) {
-        List<Line> lines = new List<Line>();
         List<SObject> rows = Database.query(
-            'SELECT Product2.ProductCode, Quantity, UnitPrice, SellingModelType, SubscriptionTerm ' +
+            'SELECT Product2.ProductCode, Quantity, UnitPrice, SellingModelType, PricingTermCount, PricingTermUnit ' +
             'FROM QuoteLineItem WHERE QuoteId = :quoteId WITH USER_MODE'
         );
-        for (SObject row : rows) {
-            String modelType = (String) row.get('SellingModelType');
-            Boolean recurring = modelType == 'TermDefined' || modelType == 'Evergreen';
-            Object term = row.get('SubscriptionTerm');
-            Integer months = recurring ? (term == null ? null : Integer.valueOf(term)) : 0;
-            Product2 product = (Product2) row.getSObject('Product2');
-            lines.add(
-                new Line(
-                    product == null ? null : product.ProductCode,
-                    recurring,
-                    (Decimal) row.get('UnitPrice'),
-                    (Decimal) row.get('Quantity'),
-                    months
-                )
-            );
+        return fromQuoteLines(rows);
+    }
+
+    /**
+     * Maps quote lines to the rule without a query, so a test can pass lines it built in memory. A line is recurring
+     * when its selling model is term defined or evergreen. The months come from PricingTermCount, the term the price
+     * was worked out over (12 for a year of Connect). SubscriptionTerm is not used: on a monthly plan it holds the
+     * billing period (1), which would make a twelve-month plan count for one month. An evergreen line has no term.
+     */
+    public static Result fromQuoteLines(List<SObject> rows) {
+        List<Line> lines = new List<Line>();
+        if (rows != null) {
+            for (SObject row : rows) {
+                String modelType = (String) row.get('SellingModelType');
+                Boolean recurring = modelType == 'TermDefined' || modelType == 'Evergreen';
+                Integer months = 0;
+                if (modelType == 'Evergreen') {
+                    months = null;
+                } else if (recurring) {
+                    Decimal count = (Decimal) row.get('PricingTermCount');
+                    String unit = (String) row.get('PricingTermUnit');
+                    months = count == null ? null : Integer.valueOf(unit == 'Years' ? count * 12 : count);
+                }
+                Product2 product = (Product2) row.getSObject('Product2');
+                lines.add(
+                    new Line(
+                        product == null ? null : product.ProductCode,
+                        recurring,
+                        (Decimal) row.get('UnitPrice'),
+                        (Decimal) row.get('Quantity'),
+                        months
+                    )
+                );
+            }
         }
         return calculate(lines);
     }

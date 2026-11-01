@@ -1,0 +1,3 @@
+SELECT Request_Key__c, Status__c, Attempts__c, Quote__r.QuoteNumber
+FROM Quote_Request__c
+WHERE Opportunity_Id__c = '006g700000N3eenAAB'

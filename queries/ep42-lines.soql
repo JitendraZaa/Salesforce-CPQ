@@ -1,0 +1,3 @@
+SELECT Quote.QuoteNumber, Product2.ProductCode, Quantity, UnitPrice
+FROM QuoteLineItem
+WHERE Quote.QuoteNumber = '00000046'

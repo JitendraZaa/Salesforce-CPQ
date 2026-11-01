@@ -1,0 +1,3 @@
+SELECT DocumentNumber, TotalAmount, NetCreditsApplied, NetPaymentsApplied, Balance
+FROM Invoice
+WHERE DocumentNumber = 'DOC-000000002'

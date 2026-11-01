@@ -1,0 +1,3 @@
+SELECT PaymentNumber, Amount, NetApplied, Status
+FROM Payment
+WHERE Account.Name = 'Swift Couriers'

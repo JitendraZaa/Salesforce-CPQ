@@ -1,0 +1,4 @@
+SELECT SUM(TotalPrice)
+FROM OrderItem
+WHERE Order.OrderNumber = '00000126'
+AND Product2.ProductCode = 'VC-SUB'

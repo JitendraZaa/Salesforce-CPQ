@@ -1,0 +1,4 @@
+SELECT DocumentNumber, InvoiceDate, DueDate, TotalAmount, NetPaymentsApplied, NetCreditsApplied, Balance, SettlementStatus
+FROM Invoice
+WHERE BillingAccount.Name = 'Swift Couriers'
+ORDER BY DocumentNumber
